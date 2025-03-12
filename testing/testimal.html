@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Testimonials - Fit Bridge</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+      .heading {
+        font-size: 28px;
+        font-weight: bold;
+        color: #28a745;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1200px;
+      }
+      .testimonial-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+        text-align: center;
+        transition: 0.3s;
+      }
+      .testimonial-box:hover {
+        transform: translateY(-5px);
+      }
+      .testimonial-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .review {
+        font-size: 16px;
+        color: #333;
+        margin-top: 10px;
+      }
+      .name {
+        font-weight: bold;
+        margin-top: 8px;
+        color: #ff4b2b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">Customer Testimonials</div>
+    <div class="testimonials">
+      <div class="testimonial-box">
+        <img
+          src="/Images/fitimage.webp"
+          alt="Before & After"
+          class="testimonial-img"
+        />
+        <p class="review">
+          "Fit Bridge changed my life! I lost 15kg in 3 months with their
+          personalized diet plans and workouts."
+        </p>
+        <p class="name">- Rajesh Kumar</p>
+      </div>
+      <div class="testimonial-box">
+        <img
+          src="Images/fitimage.webp"
+          alt="Before & After"
+          class="testimonial-img"
+        />
+        <p class="review">
+          "Their 24/7 support kept me motivated. Best decision I ever made!"
+        </p>
+        <p class="name">- Anjali Verma</p>
+      </div>
+      <div class="testimonial-box">
+        <img
+          src="before-after3.jpg"
+          alt="Before & After"
+          class="testimonial-img"
+        />
+        <p class="review">
+          "Affordable and effective! Gained muscle and improved my stamina."
+        </p>
+        <p class="name">- Rohit Sharma</p>
+      </div>
+    </div>
+  </body>
+</html>

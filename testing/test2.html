@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit Bridge - Your Fitness Partner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .heading {
+        font-size: 28px;
+        font-weight: bold;
+        color: #28a745;
+        margin-bottom: 15px;
+      }
+      .description {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .service-box {
+        width: 280px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.4s;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: #222;
+      }
+      .service-box i {
+        font-size: 24px;
+        color: #28a745;
+      }
+      .service-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .cta-btn {
+        margin-top: 30px;
+        background: linear-gradient(135deg, #ff4b2b, #ff416c);
+        color: white;
+        padding: 14px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .cta-btn:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #ff3a1a, #ff1e62);
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">FIT BRIDGE - YOUR FITNESS PARTNER</div>
+      <p class="description">
+        At Fit Bridge, we bridge the gap between your fitness goals and real,
+        sustainable results. Whether you want to lose weight, gain muscle, or
+        manage a health condition, we offer customized solutions designed just
+        for you.
+      </p>
+      <div class="services">
+        <div class="service-box">
+          <i class="fas fa-utensils"></i> Customized Diet Plans – Tailored meal
+          plans for weight loss, weight gain, and health conditions.
+        </div>
+        <div class="service-box">
+          <i class="fas fa-dumbbell"></i> Live Workout Sessions – Daily virtual
+          workout classes with expert trainers.
+        </div>
+        <div class="service-box">
+          <i class="fas fa-headset"></i> 24/7 Support & Guidance – Get constant
+          support from our experts.
+        </div>
+        <div class="service-box">
+          <i class="fas fa-heartbeat"></i> Daily Follow-ups & Health Monitoring
+          – Ensuring you stay motivated.
+        </div>
+        <div class="service-box">
+          <i class="fas fa-tags"></i> Affordable Pricing – Premium services at
+          budget-friendly prices.
+        </div>
+        <div class="service-box">
+          <i class="fas fa-book-open"></i> Recipe Books – Exclusive healthy
+          recipes for weight loss and muscle gain.
+        </div>
+      </div>
+      <button class="cta-btn">Join Our Community</button>
+    </div>
+  </body>
+</html>
