@@ -3,109 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fit Bridge - Your Ultimate Health & Wellness Partner</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
+    <title>Diet & Fitness Theme</title>
     <style>
-      h1 {
-        font-family: "Anton", sans-serif;
-        font-size: 60px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #ff4500; /* Fitness ke liye strong color */
-      }
-      body {
-        font-family: Arial, sans-serif;
+      * {
         margin: 0;
         padding: 0;
-        background-color: #f8f9fa;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(130deg, #d4f4dd 50%, #3c9b62 50%);
+        overflow: hidden;
+      }
+
+      .hero-section {
         text-align: center;
+        color: #222;
       }
-      .header {
-        background-color: #28a745;
-        color: white;
-        padding: 20px;
-        font-size: 24px;
-        font-weight: bold;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
       }
-      .subheadline {
-        font-size: 18px;
-        color: #555;
-        margin: 20px;
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
       }
-      .cta-buttons button {
-        background-color: #28a745;
+
+      .btn {
+        padding: 10px 20px;
+        background-color: #28a746;
         color: white;
         border: none;
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 16px;
+        border-radius: 8px;
         cursor: pointer;
-        border-radius: 5px;
+        transition: 0.3s ease-in-out;
       }
-      .cta-buttons button:hover {
-        background-color: #218838;
+
+      .btn:hover {
+        background-color: #1f8a3a;
       }
-      .section {
-        padding: 30px;
-        background-color: white;
-        margin: 20px auto;
-        width: 80%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+
+      .dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
       }
-      .footer {
-        background-color: #28a745;
+
+      /* Dark Mode CSS */
+      body.dark-mode {
+        background: linear-gradient(130deg, #1b1b1b 50%, #222222 50%);
         color: white;
-        padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
+      }
+
+      .dark-mode .btn {
+        background-color: #3c9b62;
+      }
+
+      .dark-mode .btn:hover {
+        background-color: #28a746;
       }
     </style>
   </head>
+
   <body>
-    <div class="header">
-      FIT LIFE, FIT BUDGET – YOUR ULTIMATE HEALTH & WELLNESS PARTNER!
-    </div>
-    <div class="subheadline">
-      PERSONALIZED DIET PLANS, EFFECTIVE WORKOUT ROUTINES, AND 24/7 EXPERT
-      SUPPORT – ALL IN ONE PLACE.
-    </div>
-
-    <div class="cta-buttons">
-      <button>GET STARTED TODAY</button>
-      <button>BOOK A FREE CONSULTATION</button>
-      <button>VIEW OUR PLANS</button>
+    <div class="hero-section">
+      <h1>Eat Clean, Stay Fit 🥗🏋️‍♂️</h1>
+      <p>Your fitness journey starts here!</p>
+      <button class="btn">Get Started</button>
+      <div class="dark-mode-toggle" onclick="toggleMode()">🌙</div>
     </div>
 
-    <div class="section">
-      <h2>About Fit Bridge</h2>
-      <p>
-        At Fit Bridge, we bridge the gap between your fitness goals and real,
-        sustainable results. Whether you want to lose weight, gain muscle, or
-        manage a health condition, we offer customized solutions designed just
-        for you.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Customized Diet Plans</li>
-        <li>Live Workout Sessions</li>
-        <li>24/7 Support & Guidance</li>
-        <li>Daily Follow-Ups & Health Monitoring</li>
-        <li>Affordable Pricing</li>
-      </ul>
-    </div>
-
-    <body>
-      <h1>Get Fit, Stay Healthy!</h1>
-    </body>
-
-    <div class="footer">&copy; 2025 Fit Bridge | All Rights Reserved</div>
+    <script>
+      function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
   </body>
 </html>

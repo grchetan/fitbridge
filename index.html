@@ -5,34 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FITBRIDGE</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="shortcut icon" href="Images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/advanced.css" />
+    <link
+      rel="shortcut icon"
+      href="Images/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
     <!--Social icon fonts -->
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <!--Headline font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Carrois+Gothic&family=Delius+Unicase&family=Denk+One&family=Gluten:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Holtwood+One+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Sulphur+Point:wght@300;400;700&family=Zen+Dots&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Carrois+Gothic&family=Delius+Unicase&family=Denk+One&family=Gluten:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Holtwood+One+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Sulphur+Point:wght@300;400;700&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
     <header>
       <nav>
-        <!--<div class="logo">
-          <img src="/newlogo.png" alt="Logo" />
-        </div> -->
         <div class="logo">
-            <h1><span>FIT</span>BRIDGE</h1>
+          <img src="Images/newlogo.png" alt="Logo" />
+          <div class="humburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </div>
-        <div>
-        <ul>
-          <li><a href="#Home">Home</a></li>
+
+        <ul class="nav-menu">
+          <li><a href="#Home" class="active">Home</a></li>
           <li><a href="#About Us">About Us</a></li>
           <li><a href="#Our Services">Our Services</a></li>
           <li><a href="#Diet Plans & Pricing">Diet Plans & Pricing</a></li>
@@ -40,75 +55,317 @@
           <li><a href="#Contact Us">Contact Us</a></li>
         </ul>
       </nav>
-    </div>
     </header>
 
     <!-- Home Section Start-->
     <section>
-        <div class="home-page">
-          <div class="headline">
-            <h1>FIT LIFE, FIT BUDGET – YOUR ULTIMATE HEALTH & WELLNESS PARTNER!</h1>
-            <p>PERSONALIZED DIET PLANS, EFFECTIVE WORKOUT ROUTINES, AND 24/7 EXPERT SUPPORT – ALL IN ONE PLACE.</p>
-            
-             <div>
-              <button class="home-btns">GET STARTED TODAY</button>
-              <button class="home-btns">BOOK A FREE CONSULTATION</button>
-              <button class="home-btns">VIEW OUR PLANS</button>
-             </div>
-          </div>
+      <div class="home-page">
+        <div class="headline">
+          <h1>
+            FIT LIFE, FIT BUDGET – YOUR ULTIMATE HEALTH & WELLNESS PARTNER!
+          </h1>
+          <p>
+            PERSONALIZED DIET PLANS, EFFECTIVE WORKOUT ROUTINES, AND 24/7 EXPERT
+            SUPPORT – ALL IN ONE PLACE.
+          </p>
 
-          <!--<div class="homeimg">
+          <div class="home-button">
+            <button class="home-btns">GET STARTED TODAY</button>
+            <button class="home-btns2">BOOK A FREE CONSULTATION</button>
+            <button class="home-btns3">VIEW OUR PLANS</button>
+          </div>
+        </div>
+
+        <!--<div class="homeimg">
             <img src="Images/cooking@2x.png" alt="">
           </div> -->
-        </div>
+      </div>
     </section>
 
     <!--Home Intro Section-->
 
     <section class="intro-section">
-
       <div class="intro-home">
-        <img src="/Images/newlogo.png" alt="FITBRIDGELOGO">
-        <h1 class="home-intro">At Fit Bridge, we bridge the gap between your fitness goals and real, sustainable results. Whether your goal is weight loss, muscle gain, or managing a health condition, we provide customized solutions tailored just for you.</h1>
-     
-
-        <div class="services">
-            <div class="service-box">
-              <i class="fas fa-utensils"></i>
-              <h1>CUSTOMIZED DIET PLANS</h1>
-              <p> Tailored meal plans for weight loss, weight gain, and health conditions.</p>
-            </div>
-
-            <div class="service-box">
-              <i class="fas fa-dumbbell"></i> 
-              <h1>Live Workout Sessions</h1> 
-              <p>virtual workout classes with expert trainers. </p>
-            </div>
-
-            <div class="service-box">
-              <i class="fas fa-headset"></i> 
-              <h1>24/7 Support & Guidance</h1> 
-              <p>constant support from our experts.</p>
-            </div>
-
-            <div class="service-box">
-              <i class="fas fa-heartbeat"></i>
-              <h1>Daily Follow-ups & Health Monitoring</h1> 
-              <p>you stay motivated.</p>
-            </div>
-            <div class="service-box">
-              <i class="fas fa-tags"></i> 
-              <h1>Affordable Pricing</h1>
-              <p>services at budget-friendly prices. </p>
-            </div>
-            <div class="service-box">
-              <i class="fas fa-book-open"></i> 
-              <h1>Recipe Books</h1>
-              <p>healthy recipes for weight loss and muscle gain. </p>
-            </div>
-
+        <div class="logo2">
+          <h1><span>FIT</span>BRIDGE</h1>
         </div>
-       </div>
+        <h1 class="home-intro">
+          At Fit Bridge, we bridge the gap between your fitness goals and real,
+          sustainable results. Whether your goal is weight loss, muscle gain, or
+          managing a health condition, we provide customized solutions tailored
+          just for you.
+        </h1>
+      </div>
+      <!--  -->
+
+      <div class="service-container">
+        <h1 class="service-head">OUR SERVICES</h1>
+        <div class="services">
+          <div class="service-box">
+            <i class="fas fa-utensils"></i>
+            <h1>CUSTOMIZED DIET PLANS</h1>
+            <p>
+              Tailored meal plans for weight loss, weight gain, and health
+              conditions.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-dumbbell"></i>
+            <h1>Live Workout Sessions</h1>
+            <p>virtual workout classes with expert trainers.</p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-headset"></i>
+            <h1>24/7 Support & Guidance</h1>
+            <p>constant support from our experts.</p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-heartbeat"></i>
+            <h1>Daily Follow-ups & Health Monitoring</h1>
+            <p>you stay motivated.</p>
+          </div>
+          <div class="service-box">
+            <i class="fas fa-tags"></i>
+            <h1>Affordable Pricing</h1>
+            <p>services at budget-friendly prices.</p>
+          </div>
+          <div class="service-box">
+            <i class="fas fa-book-open"></i>
+            <h1>Recipe Books</h1>
+            <p>healthy recipes for weight loss and muscle gain.</p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section class="whychoose-container">
+      <h1>WHY CHOOSE FIT BRIDGE?</h1>
+
+      <div class="whychoose">
+        <div class="whychoose-p">
+          <p>
+            We offer a family-like atmosphere with round-the-clock guidance. Our
+            mission is to make fitness and health accessible for all—without
+            breaking the bank!
+          </p>
+        </div>
+
+        <div class="whychoose-box">
+          <div class="whychoose-item">
+            <div><i class="fas fa-user-check"></i></div>
+            <div>
+              <h3>Expert Trainers</h3>
+              <p>
+                Certified professionals with years of experience in fitness and
+                nutrition.
+              </p>
+            </div>
+          </div>
+
+          <div class="whychoose-item">
+            <div><i class="fas fa-mobile-alt"></i></div>
+            <div>
+              <h3>5000+ Happy Clients</h3>
+              <p>Growing community of successful transformations</p>
+            </div>
+          </div>
+
+          <div class="whychoose-item">
+            <div><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h3>Proven Results</h3>
+              <p>Thousands of success stories and transformations.</p>
+            </div>
+          </div>
+
+          <div class="whychoose-item">
+            <div><i class="fas fa-tags"></i></div>
+            <div>
+              <h3>Affordable Plans</h3>
+              <p>Flexible pricing options to suit every budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Customer-testimontals">
+      <h1>Customer Testimontals</h1>
+
+      <div class="testimonial-card-container">
+        <div class="testimonial-card">
+          <div class="images">
+            <div class="before">
+              <span class="badge">Before</span>
+              <img
+                src="/Images/custumer-befoer-after/customer1.png"
+                alt="Before image"
+              />
+            </div>
+            <div class="after">
+              <span class="badge" style="background-color: #28a745">After</span>
+              <img
+                src="/Images/custumer-befoer-after/customer3.png"
+                alt="After image"
+              />
+            </div>
+          </div>
+          <div class="profile">
+            <h2>riya</h2>
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i> MP indore
+            </p>
+            <p class="highlight">Lost 20kg in 4 months</p>
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "The personalized training program completely transformed my life.
+              Not only did I achieve my weight loss goals, but I also gained
+              confidence and energy I never knew I had."
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="images">
+            <div class="before">
+              <span class="badge">Before</span>
+              <img
+                src="/Images/custumer-befoer-after/customer2.png"
+                alt="Before image"
+              />
+            </div>
+            <div class="after">
+              <span class="badge" style="background-color: #28a745">After</span>
+              <img src="/Images/2.png" alt="After image" />
+            </div>
+          </div>
+          <div class="profile">
+            <h2>Sarah</h2>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Virar</p>
+            <p class="highlight">Improved strength & flexibility</p>
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "I've never felt better! The holistic approach to fitness has
+              transformed my life."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="join-btn">Join Our Community</button>
+      </div>
+    </section>
+
+    <section class="bmi">
+      <div class="bmi-container">
+        <h1>BMI Calculator</h1>
+        <p>
+          Body Mass Index (BMI) helps you determine whether you're underweight,
+          normal, overweight, or obese.
+        </p>
+
+        <div class="input-section">
+          <input type="number" id="weight" placeholder="Weight in kg" />
+          <input type="number" id="height" placeholder="Height in meters" />
+          <button onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+
+        <div class="result">
+          <h2>Your BMI: <span id="bmi-value">0</span></h2>
+          <p id="bmi-category">Category: N/A</p>
+        </div>
+
+        <div class="bmi-info">
+          <h3>BMI Chart:</h3>
+          <ul>
+            <li>Underweight: Below 18.5</li>
+            <li>Normal Weight: 18.5 - 24.9 ✅</li>
+            <li>Overweight: 25 - 29.9</li>
+            <li>Obese: 30 or Above 🚫</li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        function calculateBMI() {
+          const weight = parseFloat(document.getElementById("weight").value);
+          const height = parseFloat(document.getElementById("height").value);
+          const bmi = (weight / (height * height)).toFixed(2);
+          const result = document.getElementById("bmi-value");
+          const category = document.getElementById("bmi-category");
+
+          if (bmi < 18.5) {
+            category.innerText = "Category: Underweight 🟡";
+          } else if (bmi >= 18.5 && bmi <= 24.9) {
+            category.innerText = "Category: Normal ✅";
+          } else if (bmi >= 25 && bmi <= 29.9) {
+            category.innerText = "Category: Overweight 🟠";
+          } else {
+            category.innerText = "Category: Obese 🔴";
+          }
+
+          result.innerText = bmi;
+        }
+      </script>
+    </section>
+
+    <footer>
+      <h1>Contact Us</h1>
+      <div class="footer-container">
+        <div class="footer-section">
+          <img src="Images/3.png" style="width: 200px" alt="logo" />
+          <p class="footer-paragraph">
+            Transform your health and fitness journey with personalized training
+            and nutrition plans tailored to your goals.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Have Questions? Let's Connect!</h3>
+          <p>
+            <a href="mailto:support@fitbridge.com"
+              ><i class="fas fa-envelope"></i> support@fitbridge.com</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://wa.me/919724878903?text=Hello%20Team%20Fit%20Bridge%2C%20I%20am%20interested%20in%20your%20Personalized%20Diet%20Plan.%20Please%20guide%20me%20further."
+              target="_blank"
+              ><i class="fab fa-whatsapp"></i> +91 97248 78903</a
+            >
+          </p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form action="">
+            <input type="email" required="Enter your email" />
+            <button class="sub-btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">&copy; 2025 Fit Bridge. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript/script.js"></script>
   </body>
 </html>

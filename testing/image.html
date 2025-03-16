@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Slider</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .testimonial-slider {
+        width: 700px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      .before-after {
+        display: flex;
+        gap: 10px;
+      }
+      .before,
+      .after {
+        width: 50%;
+        position: relative;
+      }
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .profile {
+        margin-top: 20px;
+      }
+      .profile h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .location {
+        color: gray;
+        margin: 5px 0;
+      }
+      .highlight {
+        color: green;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .stars {
+        color: gold;
+        margin-bottom: 10px;
+      }
+      .quote {
+        font-style: italic;
+        color: #555;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .nav-buttons button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .nav-buttons button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="testimonial-slider"
+      onmouseover="stopAutoSlide()"
+      onmouseout="startAutoSlide()"
+    >
+      <div class="slider" id="slider"></div>
+      <div class="nav-buttons">
+        <button onclick="manualPrevSlide()">❮ Prev</button>
+        <button onclick="manualNextSlide()">Next ❯</button>
+      </div>
+    </div>
+
+    <script>
+      const testimonials = [
+        {
+          before: "before1.jpg",
+          after: "after1.jpg",
+          name: "Sarah Johnson",
+          location: "New York, NY",
+          result: "Lost 20kg in 6 months",
+          stars: "★★★★★",
+          review:
+            "The personalized training program completely transformed my life. Not only did I achieve my weight loss goals, but I also gained confidence and energy I never knew I had.",
+        },
+        {
+          before: "before2.jpg",
+          after: "after2.jpg",
+          name: "David Miller",
+          location: "California, USA",
+          result: "Lost 15kg in 4 months",
+          stars: "★★★★★",
+          review:
+            "This program was a game changer for me. I feel more active and confident than ever before.",
+        },
+        {
+          before: "before3.jpg",
+          after: "after3.jpg",
+          name: "Emily Davis",
+          location: "Texas, USA",
+          result: "Lost 18kg in 5 months",
+          stars: "★★★★★",
+          review:
+            "I never thought I could achieve this transformation. My energy levels have skyrocketed!",
+        },
+      ];
+
+      const slider = document.getElementById("slider");
+
+      function renderSlides() {
+        slider.innerHTML = testimonials
+          .map(
+            (testimonial) => `
+        <div class="slide">
+          <div class="before-after">
+            <div class="before">
+              <span class="badge">Before</span>
+              <img src="${testimonial.before}" alt="Before">
+            </div>
+            <div class="after">
+              <span class="badge" style="background-color: #28a745;">After</span>
+              <img src="${testimonial.after}" alt="After">
+            </div>
+          </div>
+          <div class="profile">
+            <h2>${testimonial.name}</h2>
+            <p class="location">📍 ${testimonial.location}</p>
+            <p class="highlight">${testimonial.result}</p>
+            <div class="stars">${testimonial.stars}</div>
+            <p class="quote">"${testimonial.review}"</p>
+          </div>
+        </div>
+      `
+          )
+          .join("");
+      }
+
+      let currentIndex = 0;
+      let autoSlideInterval = setInterval(nextSlide, 3000);
+
+      function showSlide(index) {
+        const offset = -index * 100;
+        slider.style.transform = `translateX(${offset}%)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex =
+          (currentIndex - 1 + testimonials.length) % testimonials.length;
+        showSlide(currentIndex);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000);
+      }
+
+      function manualNextSlide() {
+        stopAutoSlide();
+        nextSlide();
+      }
+
+      function manualPrevSlide() {
+        stopAutoSlide();
+        prevSlide();
+      }
+
+      renderSlides();
+    </script>
+  </body>
+</html>
