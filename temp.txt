@@ -194,4 +194,4 @@ img {
 .join-btn:active {
   transform: scale(0.95);
 }
-/end./
+/end./ss
