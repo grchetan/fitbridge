@@ -1,4 +1,21 @@
-/*  */
+/*  
+===========================================
+📱 RESPONSIVE DESIGN - MEDIA QUERIES  
+=========================================== 
+
+📌 GLOBAL NAVBAR & FOOTER STYLING  
+
+   ✅ The Navbar and Footer are shared across all pages 
+      (Home, About, Contact, etc.).
+   ✅ Separate CSS files are not used to maintain consistency.
+   ✅ Responsive behavior is handled using media queries.
+*/
+
+/*  
+===========================================
+            INDEX PAGE 
+===========================================
+*/
 @media (max-width: 375px) {
   :root {
     --p-size: 20px;
@@ -129,8 +146,8 @@
 }
 
 /* -------------
- 2 Home Section
- -------------- */
+   2 Home Section
+   -------------- */
 @media (max-width: 1024px) {
   .logo2 h1 {
     font-size: 3rem;
@@ -144,15 +161,15 @@
   }
 
   /*--------------------
-    Customer Testimontals
-    ---------------------*/
+      Customer Testimontals
+      ---------------------*/
   .Customer-testimontals h1 {
     font-size: 2rem;
   }
 
   /*-----------------
-    Insta frame 
-    -----------------*/
+      Insta frame 
+      -----------------*/
   .insta-frame {
     height: 65vh;
   }
@@ -160,6 +177,9 @@
 
 /*-------------------------- 820p For I Pad Air ------------------------------------------- */
 @media (max-width: 820px) {
+  .home-page {
+    background: url("6.jpg") no-repeat center center/cover;
+  }
   .service-container {
     padding: 20px 0;
   }
@@ -187,8 +207,8 @@
   }
 
   /*----------------
-   Whychoose Contain
-   -----------------*/
+     Whychoose Contain
+     -----------------*/
 
   .whychoose {
     flex-direction: column;
@@ -202,8 +222,8 @@
   }
 
   /*-----------------
-    Insta frame 
-    -----------------*/
+      Insta frame 
+      -----------------*/
   .insta-frame {
     height: 65vh;
   }
@@ -278,3 +298,9 @@
     font-size: 25px;
   }
 }
+
+/*  
+===========================================
+   
+===========================================
+*/

@@ -112,13 +112,14 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: left;
   height: 100vh;
-
+  width: 100%;
+  background: url("4png.png") no-repeat center center/cover;
   /* background: linear-gradient(130deg, white 50%, #28a746 50%); */
 }
-
+/* 
 .home-bg-image {
   position: absolute;
-  margin-top: 90px;
+  margin-top: 50px;
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -142,13 +143,13 @@ nav ul li a:hover::after {
   .desktop-image {
     display: none;
   }
-}
-.home-bg-image .headline {
+} */
+/* .home-bg-image .headline {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   max-width: 1000px;
-}
+} */
 .headline {
   max-width: 1000px;
   margin-left: 40px;
@@ -168,8 +169,8 @@ nav ul li a:hover::after {
   margin-top: 2rem;
   display: flex;
   justify-content: left;
-  gap: 1rem; /* Buttons ke beech spacing */
-  flex-wrap: wrap; /* Small screens pe buttons stack ho jayenge */
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .home-button button {
@@ -181,7 +182,7 @@ nav ul li a:hover::after {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   letter-spacing: 0.5px;
-  width: auto; /* Default auto size */
+  width: auto;
 }
 
 /* First Button - Premium Blue */
@@ -235,12 +236,12 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
   /* Mobile */
   .home-button {
-    flex-direction: column; /* Buttons ek line me nahi honge, neeche neeche aayenge */
+    flex-direction: column;
     align-items: center;
   }
 
   .home-button button {
-    width: 80%; /* Mobile screen par full width ke 80% ka size hoga */
+    width: 80%;
     padding: 12px 30px;
     font-size: 12px;
   }
@@ -420,11 +421,14 @@ footer h1 {
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 10px;
+  width: 100%;
 }
-.footer-paragraph {
+.footer-section {
+  padding: 1rem 0;
+}
+.footer-section .footer-paragraph {
   width: 300px;
 }
 .footer-section h3 {
@@ -499,6 +503,7 @@ hr {
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
