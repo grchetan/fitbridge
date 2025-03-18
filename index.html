@@ -32,6 +32,11 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Carrois+Gothic&family=Delius+Unicase&family=Denk+One&family=Gluten:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Holtwood+One+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Sulphur+Point:wght@300;400;700&family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
   </head>
   <body>
     <header>
@@ -64,20 +69,31 @@
         <img src="Images/6.jpg" alt="Fitimage" class="mobile-image" />
       </div> -->
 
-      <div class="home-page">
+      <div
+        class="home-page"
+        data-aos="fade"
+        data-aos-delay="50"
+        data-aos-duration="200"
+      >
         <div class="headline">
-          <h1>
+          <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
             FIT LIFE, FIT BUDGET – YOUR ULTIMATE HEALTH & WELLNESS PARTNER!
           </h1>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="200">
             PERSONALIZED DIET PLANS, EFFECTIVE WORKOUT ROUTINES, AND 24/7 EXPERT
             SUPPORT – ALL IN ONE PLACE.
           </p>
 
           <div class="home-button">
-            <button class="home-btns">GET STARTED TODAY</button>
-            <button class="home-btns2">BOOK A FREE CONSULTATION</button>
-            <button class="home-btns3">VIEW OUR PLANS</button>
+            <button class="home-btns" data-aos="fade-up" data-aos-delay="300">
+              GET STARTED TODAY
+            </button>
+            <button class="home-btns2" data-aos="fade-up" data-aos-delay="400">
+              BOOK A FREE CONSULTATION
+            </button>
+            <button class="home-btns3" data-aos="fade-up" data-aos-delay="500">
+              VIEW OUR PLANS
+            </button>
           </div>
         </div>
       </div>
@@ -88,9 +104,9 @@
     <section class="intro-section">
       <div class="intro-home">
         <div class="logo2">
-          <h1><span>FIT</span>BRIDGE</h1>
+          <h1 data-aos="fade-right"><span>FIT</span>BRIDGE</h1>
         </div>
-        <h1 class="home-intro">
+        <h1 class="home-intro" data-aos="fade-up">
           At Fit Bridge, we bridge the gap between your fitness goals and real,
           sustainable results. Whether your goal is weight loss, muscle gain, or
           managing a health condition, we provide customized solutions tailored
@@ -100,9 +116,9 @@
       <!--  -->
 
       <div class="service-container">
-        <h1 class="service-head">OUR SERVICES</h1>
+        <h1 class="service-head" data-aos="fade">OUR SERVICES</h1>
         <div class="services">
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="100">
             <i class="fas fa-utensils"></i>
             <h1>CUSTOMIZED DIET PLANS</h1>
             <p>
@@ -111,29 +127,29 @@
             </p>
           </div>
 
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="150">
             <i class="fas fa-dumbbell"></i>
             <h1>Live Workout Sessions</h1>
             <p>virtual workout classes with expert trainers.</p>
           </div>
 
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="200">
             <i class="fas fa-headset"></i>
             <h1>24/7 Support & Guidance</h1>
             <p>constant support from our experts.</p>
           </div>
 
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="250">
             <i class="fas fa-heartbeat"></i>
             <h1>Daily Follow-ups & Health Monitoring</h1>
             <p>you stay motivated.</p>
           </div>
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="300">
             <i class="fas fa-tags"></i>
             <h1>Affordable Pricing</h1>
             <p>services at budget-friendly prices.</p>
           </div>
-          <div class="service-box">
+          <div class="service-box" data-aos="slide-up" data-aos-delay="350">
             <i class="fas fa-book-open"></i>
             <h1>Recipe Books</h1>
             <p>healthy recipes for weight loss and muscle gain.</p>
@@ -293,10 +309,16 @@
             >
           </p>
           <div class="social-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
+            <a
+              href="https://www.facebook.com/profile.php?id=61572513522216"
+              target="_blank"
+              ><i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/_fit.bridge_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
 
@@ -313,5 +335,17 @@
     </footer>
 
     <script src="javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 500,
+          delay: 100,
+          easing: "ease-in-out",
+          once: true,
+          offset: 100,
+        });
+      });
+    </script>
   </body>
 </html>
