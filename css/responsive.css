@@ -13,8 +13,8 @@
 
 /*  
 ===========================================
-            INDEX PAGE 
-===========================================
+📌 GLOBAL VARIABLES - RESPONSIVE DESIGN  
+=========================================== 
 */
 @media (max-width: 375px) {
   :root {
@@ -44,7 +44,10 @@
     --font-size: 20px;
   }
 }
-/* ---------------------------------------------- */
+
+/* ------------------------
+    start main code 
+---------------------- */
 
 @media (max-width: 1100px) {
   /* navigation */
@@ -94,10 +97,6 @@
   }
   .headline h1 {
     font-size: 3rem;
-  }
-
-  .home-page::before {
-    background-size: contain;
   }
 }
 
@@ -171,7 +170,8 @@
       Insta frame 
       -----------------*/
   .insta-frame {
-    height: 65vh;
+    max-width: 600px;
+    height: 80vh;
   }
 }
 
@@ -225,7 +225,7 @@
       Insta frame 
       -----------------*/
   .insta-frame {
-    height: 65vh;
+    height: 80vh;
   }
 }
 /* 540px */
@@ -250,10 +250,10 @@
     padding: 10px;
   }
   .headline h1 {
-    font-size: 34px;
+    font-size: 45px;
   }
   .headline p {
-    font-size: 12px;
+    font-size: 18px;
   }
   .logo2 h1 {
     font-size: 34px;
@@ -277,13 +277,6 @@
   .bmi {
     padding: 30px 0px;
   }
-  footer h1 {
-    font-size: var(--h1-size);
-    margin: 0px;
-  }
-  footer {
-    padding: 10px 0;
-  }
   .insta-frame {
     height: 70vh;
   }
@@ -295,12 +288,110 @@
     padding: 0;
   }
   .headline h1 {
-    font-size: 25px;
+    font-size: 28px;
   }
 }
 
-/*  
-===========================================
-   
-===========================================
-*/
+/* ====== Footer Responsive Design ====== */
+
+/* 📌 Tablets & Small Laptops (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  footer {
+    padding: 40px 15px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-section {
+    flex: 1 1 45%;
+    max-width: 400px;
+  }
+
+  footer h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section a {
+    font-size: 0.95rem;
+  }
+
+  input[type="email"],
+  .sub-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📌 Mobile Phones (480px - 768px) */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+
+  footer h1 {
+    font-size: 1.6rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-section a {
+    font-size: 0.9rem;
+  }
+
+  input[type="email"],
+  .sub-btn {
+    font-size: 0.9rem;
+  }
+
+  .social-icons i {
+    font-size: 20px;
+  }
+}
+
+/* 📌 Extra Small Phones (Below 480px) */
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 30px 10px;
+  }
+
+  footer h1 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section a {
+    font-size: 0.85rem;
+  }
+
+  input[type="email"],
+  .sub-btn {
+    font-size: 0.85rem;
+  }
+
+  .social-icons i {
+    font-size: 18px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
