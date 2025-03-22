@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
+body,
 html {
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -402,11 +402,7 @@ Insta frame
 .insta-frame {
   width: 100%;
   max-width: 800px;
-  height: 100vh; /* Default height */
-
-  margin: auto;
-  display: block;
-  border-radius: 15px;
+  height: 100vh;
 }
 /*------------
  Footer 

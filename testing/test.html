@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diet & Fitness Theme</title>
+    <title>Pricing Plans</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -11,81 +15,118 @@
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
       }
-
       body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(130deg, #d4f4dd 50%, #3c9b62 50%);
-        overflow: hidden;
-      }
-
-      .hero-section {
+        background: #f8f9fd;
         text-align: center;
-        color: #222;
+        padding: 40px;
       }
-
+      .container {
+        max-width: 900px;
+        margin: auto;
+      }
       h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: 600;
       }
-
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+      p.subtitle {
+        color: #666;
+        margin-bottom: 30px;
       }
-
+      .plans {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .plan {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .most-popular {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #6a5ae0;
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 10px;
+      }
+      .price {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .features {
+        list-style: none;
+        text-align: left;
+        padding: 10px 0;
+      }
+      .features li {
+        margin: 5px 0;
+      }
       .btn {
-        padding: 10px 20px;
-        background-color: #28a746;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background: #222;
         color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
-      }
-
-      .btn:hover {
-        background-color: #1f8a3a;
-      }
-
-      .dark-mode-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      /* Dark Mode CSS */
-      body.dark-mode {
-        background: linear-gradient(130deg, #1b1b1b 50%, #222222 50%);
-        color: white;
-      }
-
-      .dark-mode .btn {
-        background-color: #3c9b62;
-      }
-
-      .dark-mode .btn:hover {
-        background-color: #28a746;
+        text-decoration: none;
+        border-radius: 5px;
       }
     </style>
   </head>
-
   <body>
-    <div class="hero-section">
-      <h1>Eat Clean, Stay Fit 🥗🏋️‍♂️</h1>
-      <p>Your fitness journey starts here!</p>
-      <button class="btn">Get Started</button>
-      <div class="dark-mode-toggle" onclick="toggleMode()">🌙</div>
+    <div class="container">
+      <h1>Choose the Right Plan for You</h1>
+      <p class="subtitle">
+        Transform your health with our personalized nutrition plans
+      </p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Basic Plan</h3>
+          <p class="price">₹499/month</p>
+          <ul class="features">
+            <li>✅ Diet plan</li>
+            <li>✅ WhatsApp support</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="plan" style="border: 2px solid #6a5ae0">
+          <div class="most-popular">Most Popular</div>
+          <h3>Premium Plan</h3>
+          <p class="price">₹999/month</p>
+          <ul class="features">
+            <li>✅ Diet plan</li>
+            <li>✅ Workout plans</li>
+            <li>✅ 24/7 support</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="plan">
+          <h3>Custom Plan</h3>
+          <p class="price">₹1499/month</p>
+          <ul class="features">
+            <li>✅ Personalized diet</li>
+            <li>✅ Workouts</li>
+            <li>✅ Live consultation</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="plan">
+          <h3>One-time Detox Plan</h3>
+          <p class="price">₹99</p>
+          <ul class="features">
+            <li>✅ Short-term detox meal plan</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
     </div>
-
-    <script>
-      function toggleMode() {
-        document.body.classList.toggle("dark-mode");
-      }
-    </script>
   </body>
 </html>
