@@ -399,6 +399,10 @@ Why choose fitbridge
 /*--------------- 
 Insta frame 
 ----------------*/
+.insta-frame-container {
+  display: flex;
+  justify-content: center;
+}
 .insta-frame {
   width: 100%;
   max-width: 800px;

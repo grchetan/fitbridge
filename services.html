@@ -35,10 +35,134 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
-    <style></style>
-    <link rel="stylesheet" href="/css/advanced.css" />
-    <link rel="stylesheet" href="/css/responsive.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .our-services-head {
+        margin-top: 90px;
+        padding: 5rem;
+        text-align: center;
+
+        border-radius: 5px;
+      }
+      .our-services-head h1 {
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .Personalized-Diet,
+      .Workout-Programs,
+      .Support {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        margin: 4rem 2rem;
+        padding: 4rem 0rem;
+        border-radius: 20px;
+      }
+      .Personalized-Diet-head h1,
+      .Workout-Programs-head h1,
+      .Support-head h1 {
+        font-size: var(--h1-size);
+        padding: 2rem 5px;
+      }
+      .Personalized-Diet-head i,
+      .Workout-Programs-head i,
+      .Support-head i {
+        font-size: 35px;
+        margin: 1rem;
+        padding: 20px;
+        border-radius: 12px;
+        display: inline-block;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+      }
+      .Personalized-Diet-container,
+      .Workout-Programs-container,
+      .Support-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      .Personalized-Diet-cards,
+      .Workout-Programs-cards,
+      .Support-cards {
+        padding: 3rem;
+        margin: 1rem 3rem;
+
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        color: white;
+        border-radius: 12px;
+        width: 600px;
+      }
+      .Workout-Programs-cards h3,
+      .Personalized-Diet-cards h3,
+      .Support-cards h3 {
+        font-size: 22px;
+      }
+
+      /* Price container */
+      .price-container {
+        max-width: 900px;
+        margin: auto;
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      p.subtitle {
+        color: #666;
+        margin-bottom: 30px;
+      }
+      .plans {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+      }
+      .plan {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .most-popular {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #6a5ae0;
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 10px;
+      }
+      .price {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .features {
+        list-style: none;
+        text-align: left;
+        padding: 10px 0;
+      }
+      .features li {
+        margin: 5px 0;
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background: #222;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/advanced.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <header>
@@ -56,15 +180,141 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="#Diet Plans & Pricing">Success Stories</a></li>
+          <!-- <li><a href="#Diet Plans & Pricing">Success Stories</a></li> -->
           <li><a href="#Blog & Resources">Blog & Resources</a></li>
           <li><a href="#Contact Us">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
+    <section class="our-services-conteiner">
+      <div class="our-services-head">
+        <h1>Our Services</h1>
+      </div>
+
+      <div class="Personalized-Diet">
+        <div class="Personalized-Diet-head">
+          <h1><i class="fas fa-utensils"></i> Personalized Diet Plans</h1>
+        </div>
+
+        <div class="Personalized-Diet-container">
+          <div class="Personalized-Diet-cards">
+            <h3>Weight Loss Plans</h3>
+            <p>Tailored meal plans for sustainable fat loss.</p>
+          </div>
+
+          <div class="Personalized-Diet-cards">
+            <h3>Weight Gain Plans</h3>
+            <p>Nutrition-focused plans to build healthy muscle mass.</p>
+          </div>
+
+          <div class="Personalized-Diet-cards">
+            <h3>Condition-Specific Plans</h3>
+            <p>
+              PCOS, thyroid, diabetes, fatty liver, and moreTailored meal plans
+              for sustainable fat loss.
+            </p>
+          </div>
+          <div class="Personalized-Diet-cards">
+            <h3>Pregnancy & Postpartum Nutrition</h3>
+            <p>Support for mothers-to-be and new moms.</p>
+          </div>
+        </div>
+        <!-- personalized diet contaner end -->
+      </div>
+
+      <!-- Workout programs -->
+      <div class="Workout-Programs">
+        <div class="Workout-Programs-head">
+          <h1><i class="fas fa-dumbbell"></i>Workout-Programs</h1>
+        </div>
+
+        <div class="Workout-Programs-container">
+          <div class="Workout-Programs-cards">
+            <h3>Live Online Workouts</h3>
+            <p>Group and one-on-one workout sessions.</p>
+          </div>
+          <div class="Workout-Programs-cards">
+            <h3>Customized Home & Gym Workout Plans</h3>
+            <p>Tailored workouts for all fitness levels.</p>
+          </div>
+          <div class="Workout-Programs-cards">
+            <h3>Strength, Cardio & Yoga Sessions</h3>
+            <p>Strength, Cardio & Yoga Sessions.</p>
+          </div>
+        </div>
+        <!-- Workout programs end -->
+      </div>
+
+      <!-- 24 Support Daily -->
+      <div class="Support">
+        <div class="Support-head">
+          <h1><i class="fas fa-headset"></i>24/7 Support & Daily Follow-ups</h1>
+        </div>
+
+        <div class="Support-container">
+          <div class="Support-cards">
+            <h3>Regular Support</h3>
+            <p>Regular check-ins via WhatsApp and personal calls.</p>
+          </div>
+          <div class="Support-cards">
+            <h3>Comprehensive Guidance</h3>
+            <p>Guidance on diet, exercise, and mental well-being.</p>
+          </div>
+        </div>
+        <!-- class="24-Support end -->
+      </div>
+    </section>
+
     <section>
-      <h1>Our Services</h1>
+      <div class="price-container">
+        <h1>Choose the Right Plan for You</h1>
+        <p class="subtitle">
+          Transform your health with our personalized nutrition plans
+        </p>
+
+        <div class="plans">
+          <div class="plan">
+            <h3>Basic Plan</h3>
+            <p class="price">₹499/month</p>
+            <ul class="features">
+              <li>✅ Diet plan</li>
+              <li>✅ WhatsApp support</li>
+            </ul>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+
+          <div class="plan" style="border: 2px solid #6a5ae0">
+            <div class="most-popular">Most Popular</div>
+            <h3>Premium Plan</h3>
+            <p class="price">₹999/month</p>
+            <ul class="features">
+              <li>✅ Diet plan</li>
+              <li>✅ Workout plans</li>
+              <li>✅ 24/7 support</li>
+            </ul>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+          <div class="plan">
+            <h3>Custom Plan</h3>
+            <p class="price">₹1499/month</p>
+            <ul class="features">
+              <li>✅ Personalized diet</li>
+              <li>✅ Workouts</li>
+              <li>✅ Live consultation</li>
+            </ul>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+          <div class="plan">
+            <h3>One-time Detox Plan</h3>
+            <p class="price">₹99</p>
+            <ul class="features">
+              <li>✅ Short-term detox meal plan</li>
+            </ul>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
