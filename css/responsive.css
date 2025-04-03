@@ -6,7 +6,7 @@
 📌 GLOBAL NAVBAR & FOOTER STYLING  
 
    ✅ The Navbar and Footer are shared across all pages 
-      (Home, About, Contact, etc.).
+      (Home, About, Contact).
    ✅ Separate CSS files are not used to maintain consistency.
    ✅ Responsive behavior is handled using media queries.
 */
