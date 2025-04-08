@@ -3,6 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tawlind css link -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4F46E5", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!--Social icon fonts -->
     <link
       rel="stylesheet"
@@ -32,117 +61,6 @@
     />
 
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      :root {
-        --h1-size: 2.4rem;
-        --p-size: 20px;
-      }
-
-      /* Fixed Header */
-      header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 100;
-      }
-
-      /* Navigation Bar  */
-      nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 1rem;
-        background-color: white;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 12px 0px; /* For smooth edges */
-      }
-
-      .nav-menu {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-      }
-
-      nav .logo img {
-        position: relative;
-        width: 130px;
-        transition: transform 0.3s ease-in-out;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-      }
-
-      .humburger {
-        cursor: pointer;
-        display: none;
-      }
-
-      .humburger .bar {
-        background-color: #000000;
-        display: block;
-        width: 24px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-      nav .logo img:hover {
-        transform: scale(1.2);
-      }
-      nav ul li {
-        position: relative;
-        transition: transform 0.3s ease;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-        font-weight: bolder;
-        position: relative;
-        white-space: nowrap;
-      }
-
-      /* Underline Progress Effect */
-      nav ul li a::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -3px;
-        width: 0%;
-        height: 2px;
-        background-color: rgb(0, 0, 0);
-        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-        transform: translateX(-50%);
-      }
-
-      nav ul li:hover {
-        transform: scale(1.1);
-      }
-
-      nav ul li a:hover::after {
-        width: 100%;
-      }
-
-      .active {
-        color: green;
-      }
-
       /* About us headlien */
       .about-us-head {
         margin-top: 90px;
@@ -170,6 +88,7 @@
       }
       .our-story-item h1 {
         font-size: var(--h1-size);
+        font-weight: bold;
         padding: 2rem 5px;
       }
       .our-story-item p {
@@ -183,6 +102,7 @@
       /* Mission vision */
       .mission-vision-container h1 {
         padding: 6rem;
+        font-weight: bold;
         align-items: center;
         text-align: center;
         background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
@@ -216,6 +136,7 @@
         font-weight: bold;
         padding: 1rem 0;
       }
+
       /*---------------------
              Footer
       ----------------------*/
@@ -224,11 +145,6 @@
         padding: 40px 0;
         background-color: #2c3e50;
         color: #ecf0f1;
-      }
-
-      footer h1 {
-        text-align: center;
-        margin-bottom: 40px;
       }
 
       .footer-container {
@@ -341,7 +257,7 @@
     <section class="about-us-contain">
       <div class="about-us-head">
         <h1>About Us</h1>
-        <p>Eat Clean, Stay Fit, Live Healthy 🥗🍃</p>
+        <p>Eat Clean, Stay Fit, Live Healthy 🥗</p>
       </div>
 
       <div class="our-story">
@@ -386,8 +302,181 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-gray-600">
+            Everything you need to know about our services.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button
+                class="flex items-center justify-between w-full p-6 text-left"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >How does the onboarding process work?</span
+                >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+
+              <div class="px-6 pb-6">
+                <p class="text-gray-600">
+                  Our onboarding is simple and quick. After selecting your plan,
+                  you'll complete a detailed questionnaire about your health,
+                  goals, and preferences. Then, you'll be matched with a
+                  personal coach who will schedule a welcome call to discuss
+                  your customized plan.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button
+                class="flex items-center justify-between w-full p-6 text-left"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >Will I get a personal coach?</span
+                >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+
+              <div class="px-6 pb-6 hidden">
+                <p class="text-gray-600">
+                  Yes, every client is assigned a dedicated personal coach who
+                  will be your main point of contact throughout your journey.
+                  Your coach will create your personalized plans, monitor your
+                  progress, and provide continuous support and motivation.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button
+                class="flex items-center justify-between w-full p-6 text-left"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >Can I switch plans if needed?</span
+                >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+
+              <div class="px-6 pb-6 hidden">
+                <p class="text-gray-600">
+                  Absolutely! We understand that your needs may change over
+                  time. You can easily upgrade, downgrade, or modify your plan
+                  at any time. Your coach will help ensure a smooth transition
+                  and adjust your program accordingly.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button
+                class="flex items-center justify-between w-full p-6 text-left"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >Do you offer both vegetarian and non-vegetarian plans?</span
+                >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+
+              <div class="px-6 pb-6 hidden">
+                <p class="text-gray-600">
+                  Yes, we cater to all dietary preferences. Whether you're
+                  vegetarian, vegan, non-vegetarian, or follow any specific
+                  dietary restrictions, our dietitians will create a plan that
+                  aligns with your food choices while ensuring optimal
+                  nutrition.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button
+                class="flex items-center justify-between w-full p-6 text-left"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >Do you have special plans for medical conditions?</span
+                >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+
+              <div class="px-6 pb-6 hidden">
+                <p class="text-gray-600">
+                  Yes, we specialize in creating nutrition and fitness plans for
+                  various medical conditions including PCOS, thyroid disorders,
+                  diabetes, and more. Our team includes dietitians with
+                  expertise in medical nutrition therapy who will work closely
+                  with you to manage your condition effectively.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // FAQ Toggle
+      document.querySelectorAll("#faq button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector("i");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            icon.classList.remove("ri-arrow-down-s-line");
+            icon.classList.add("ri-arrow-up-s-line");
+          } else {
+            content.classList.add("hidden");
+            icon.classList.remove("ri-arrow-up-s-line");
+            icon.classList.add("ri-arrow-down-s-line");
+          }
+        });
+      });
+    </script>
+    <script>
+      // FAQ Toggle Logic
+      const questions = document.querySelectorAll(".faq-question");
+      questions.forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          item.classList.toggle("active2");
+        });
+      });
+    </script>
     <footer>
-      <h1>Contact Us</h1>
       <div class="footer-container">
         <div class="footer-section">
           <img src="Images/3 copy.png" style="width: 200px" alt="logo" />
@@ -396,13 +485,12 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#pricing">Pricing</a></li>
+            <li><a href="Blog & Resources.html">Blog</a></li>
           </ul>
         </div>
-
         <div class="footer-section">
           <h3>Have Questions? Let's Connect!</h3>
           <p>
@@ -426,17 +514,9 @@
             <a
               href="https://www.instagram.com/_fit.bridge_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
-              ><i class="fab fa-instagram"></i>
-            </a>
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
-        </div>
-
-        <div class="footer-section">
-          <h3>Newsletter</h3>
-          <form action="">
-            <input type="email" placeholder="Enter your email" required />
-            <button class="sub-btn" type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
       <hr />

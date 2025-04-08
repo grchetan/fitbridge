@@ -4,13 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FITBRIDGE</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/advanced.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+
     <link
       rel="shortcut icon"
       href="Images/favicon_io/android-chrome-192x192.png"
       type="image/x-icon"
+    />
+    <!-- Tawlind css link -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2ECC71", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
     <!--Social icon fonts -->
     <link
@@ -38,6 +64,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/advanced.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <header>
@@ -72,8 +101,126 @@
       </div>
     </section>
 
+    <!-- contact us section  -->
+    <main class="container mx-auto px-6 py-12 max-w-6xl">
+      <section class="mb-16 mt-[10rem]">
+        <h1
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          Contact Us
+        </h1>
+
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
+            <a
+              href="https://wa.me/919724878903"
+              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
+            >
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
+              >
+                <i class="ri-whatsapp-line ri-lg text-primary"></i>
+              </div>
+              <span>WhatsApp</span>
+            </a>
+
+            <a
+              href="mailto:fitbridgeofficial@gmail.com"
+              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
+            >
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
+              >
+                <i class="ri-mail-line ri-lg text-primary"></i>
+              </div>
+              <span>Email</span>
+            </a>
+
+            <a
+              href="#"
+              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
+            >
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
+              >
+                <i class="ri-instagram-line ri-lg text-primary"></i>
+              </div>
+              <span>Instagram</span>
+            </a>
+
+            <a
+              href="#"
+              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
+            >
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
+              >
+                <i class="ri-facebook-fill ri-lg text-primary"></i>
+              </div>
+              <span>Facebook</span>
+            </a>
+          </div>
+
+          <form class="max-w-2xl mx-auto">
+            <div class="mb-6">
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white"
+                placeholder="your.email@example.com"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white resize-none"
+                placeholder="How can we help you?"
+                required
+              ></textarea>
+            </div>
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-primary/90 transition-all whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <footer>
-      <h1>Get in Touch with Fit Bridge</h1>
       <div class="footer-container">
         <div class="footer-section">
           <img src="Images/3 copy.png" style="width: 200px" alt="logo" />
@@ -82,10 +229,10 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#pricing">Pricing</a></li>
+            <li><a href="Blog & Resources.html">Blog</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -114,14 +261,6 @@
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
-        </div>
-
-        <div class="footer-section">
-          <h3>Newsletter</h3>
-          <form action="">
-            <input type="email" required="Enter your email" />
-            <button class="sub-btn" type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
       <hr />

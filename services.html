@@ -9,6 +9,34 @@
       href="Images/favicon_io/android-chrome-192x192.png"
       type="image/x-icon"
     />
+    <!-- Tawlind css link -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2ECC71", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!--Social icon fonts -->
     <link
       rel="stylesheet"
@@ -36,68 +64,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <style>
-      .our-services-head {
-        margin-top: 90px;
-        padding: 5rem;
-        text-align: center;
-
-        border-radius: 5px;
-      }
-      .our-services-head h1 {
-        font-size: 48px;
-        font-weight: bold;
-      }
-      .Personalized-Diet,
-      .Workout-Programs,
-      .Support {
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
-        margin: 4rem 2rem;
-        padding: 4rem 0rem;
-        border-radius: 20px;
-      }
-      .Personalized-Diet-head h1,
-      .Workout-Programs-head h1,
-      .Support-head h1 {
-        font-size: var(--h1-size);
-        padding: 2rem 5px;
-      }
-      .Personalized-Diet-head i,
-      .Workout-Programs-head i,
-      .Support-head i {
-        font-size: 35px;
-        margin: 1rem;
-        padding: 20px;
-        border-radius: 12px;
-        display: inline-block;
-        background: linear-gradient(45deg, #ff416c, #ff4b2b);
-        color: white;
-      }
-      .Personalized-Diet-container,
-      .Workout-Programs-container,
-      .Support-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-      }
-      .Personalized-Diet-cards,
-      .Workout-Programs-cards,
-      .Support-cards {
-        padding: 3rem;
-        margin: 1rem 3rem;
-
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        color: white;
-        border-radius: 12px;
-        width: 600px;
-      }
-      .Workout-Programs-cards h3,
-      .Personalized-Diet-cards h3,
-      .Support-cards h3 {
-        font-size: 22px;
-      }
-
       /* Price container */
       .price-container {
         max-width: 900px;
@@ -166,6 +132,7 @@
   </head>
   <body>
     <header>
+      <!-- Navigation  -->
       <nav>
         <div class="logo">
           <img src="Images/newlogo.png" alt="Logo" />
@@ -187,138 +154,491 @@
       </nav>
     </header>
 
-    <section class="our-services-conteiner">
-      <div class="our-services-head">
-        <h1>Our Services</h1>
-      </div>
-
-      <div class="Personalized-Diet">
-        <div class="Personalized-Diet-head">
-          <h1><i class="fas fa-utensils"></i> Personalized Diet Plans</h1>
+    <!-- Service Categories -->
+    <section class="py-16 bg-white mt-[8rem]">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Services
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We offer comprehensive solutions to help you achieve your health and
+            fitness goals through personalized approaches.
+          </p>
         </div>
 
-        <div class="Personalized-Diet-container">
-          <div class="Personalized-Diet-cards">
-            <h3>Weight Loss Plans</h3>
-            <p>Tailored meal plans for sustainable fat loss.</p>
-          </div>
-
-          <div class="Personalized-Diet-cards">
-            <h3>Weight Gain Plans</h3>
-            <p>Nutrition-focused plans to build healthy muscle mass.</p>
-          </div>
-
-          <div class="Personalized-Diet-cards">
-            <h3>Condition-Specific Plans</h3>
-            <p>
-              PCOS, thyroid, diabetes, fatty liver, and moreTailored meal plans
-              for sustainable fat loss.
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-8 transition-transform hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6"
+            >
+              <i class="ri-restaurant-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Diet Plans</h3>
+            <p class="text-gray-600 mb-4">
+              Personalized nutrition plans based on your body type, goals, and
+              dietary preferences. Our experts create balanced meal plans that
+              fit your lifestyle.
             </p>
+            <a
+              href="Blog & Resources.html"
+              class="text-primary font-medium flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
           </div>
-          <div class="Personalized-Diet-cards">
-            <h3>Pregnancy & Postpartum Nutrition</h3>
-            <p>Support for mothers-to-be and new moms.</p>
-          </div>
-        </div>
-        <!-- personalized diet contaner end -->
-      </div>
 
-      <!-- Workout programs -->
-      <div class="Workout-Programs">
-        <div class="Workout-Programs-head">
-          <h1><i class="fas fa-dumbbell"></i>Workout-Programs</h1>
-        </div>
+          <!-- Service Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-8 transition-transform hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6"
+            >
+              <i class="ri-heart-pulse-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Fitness Programs
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Tailored workout routines designed to match your fitness level and
+              goals. From strength training to cardio, we create programs that
+              evolve with you.
+            </p>
+            <a
+              href="Blog & Resources.html"
+              class="text-primary font-medium flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
 
-        <div class="Workout-Programs-container">
-          <div class="Workout-Programs-cards">
-            <h3>Live Online Workouts</h3>
-            <p>Group and one-on-one workout sessions.</p>
-          </div>
-          <div class="Workout-Programs-cards">
-            <h3>Customized Home & Gym Workout Plans</h3>
-            <p>Tailored workouts for all fitness levels.</p>
-          </div>
-          <div class="Workout-Programs-cards">
-            <h3>Strength, Cardio & Yoga Sessions</h3>
-            <p>Strength, Cardio & Yoga Sessions.</p>
-          </div>
-        </div>
-        <!-- Workout programs end -->
-      </div>
-
-      <!-- 24 Support Daily -->
-      <div class="Support">
-        <div class="Support-head">
-          <h1><i class="fas fa-headset"></i>24/7 Support & Daily Follow-ups</h1>
-        </div>
-
-        <div class="Support-container">
-          <div class="Support-cards">
-            <h3>Regular Support</h3>
-            <p>Regular check-ins via WhatsApp and personal calls.</p>
-          </div>
-          <div class="Support-cards">
-            <h3>Comprehensive Guidance</h3>
-            <p>Guidance on diet, exercise, and mental well-being.</p>
+          <!-- Service Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-8 transition-transform hover:-translate-y-1"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6"
+            >
+              <i class="ri-mental-health-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Health Coaching
+            </h3>
+            <p class="text-gray-600 mb-4">
+              One-on-one guidance from certified health coaches who provide
+              motivation, accountability, and expert advice to help you reach
+              your wellness goals.
+            </p>
+            <a
+              href="Blog & Resources.html"
+              class="text-primary font-medium flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
           </div>
         </div>
-        <!-- class="24-Support end -->
       </div>
     </section>
 
-    <section>
-      <div class="price-container">
-        <h1>Choose the Right Plan for You</h1>
-        <p class="subtitle">
-          Transform your health with our personalized nutrition plans
-        </p>
+    <!-- Features Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-4">
+        <!-- Feature 1 -->
+        <div class="flex flex-col md:flex-row items-center mb-16 gap-8">
+          <div class="md:w-1/2">
+            <img
+              src="Images/personalizediet.png"
+              alt="Personalized Nutrition Analysis"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Personalized Nutrition Analysis
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-base font-semibold text-gray-800">
+                    Weight loss plans
+                  </p>
+                  <p class="text-gray-700">
+                    Tailored meal plans for sustainable fat loss.
+                  </p>
+                </div>
+              </li>
 
-        <div class="plans">
-          <div class="plan">
-            <h3>Basic Plan</h3>
-            <p class="price">₹499/month</p>
-            <ul class="features">
-              <li>✅ Diet plan</li>
-              <li>✅ WhatsApp support</li>
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-base font-semibold text-gray-800">
+                    Weight gain plans
+                  </p>
+                  <p class="text-gray-700">
+                    Nutrition-focused plans to build healthy muscle mass.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-base font-semibold text-gray-800">
+                    Condition-specific plans
+                  </p>
+                  <p class="text-gray-700">
+                    PCOS, thyroid, diabetes, fatty liver, and more.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-base font-semibold text-gray-800">
+                    Pregnancy & postpartum nutrition
+                  </p>
+                  <p class="text-gray-700">
+                    Support for mothers-to-be and new moms.
+                  </p>
+                </div>
+              </li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center mb-16 gap-8">
+          <div class="md:w-1/2">
+            <img
+              src="Images/workout.png"
+              alt="Smart Fitness Tracking"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Workout Programs
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <p class="text-gray-700">
+                  Live online workouts – Group and one-on-one workout sessions.
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <p class="text-gray-700">
+                  Customized home & gym workout plans – Tailored workouts for
+                  all fitness levels.
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <p class="text-gray-700">
+                  Strength, cardio & yoga sessions – Holistic fitness approach.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2">
+            <img
+              src="Images/24support.png"
+              alt="Expert Coaching Support"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              24/7 support & daily follow-ups
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <p class="text-gray-700">
+                  Regular check-ins via WhatsApp and personal calls.
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center mt-1 mr-3 bg-primary/10 rounded-full flex-shrink-0"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <p class="text-gray-700">
+                  Guidance on diet, exercise, and mental well-being.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Choose the Right Plan for You
+          </h2>
+          <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Transform your health with our personalized nutrition plans
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded shadow-md hover:shadow-lg transition-shadow p-8 border border-gray-100"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              Basic Plan
+            </h3>
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-gray-900">₹499</span>
+              <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Personalized Diet Plan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">WhatsApp Support</span>
+              </li>
+            </ul>
+            <a
+              href="https://wa.me/919724878903?text=Hello%20Team%20Fit%20Bridge%2C%20I%20want%20to%20discuss%20about%20the%20Custom%20Plan."
+              class="mt-[10rem] bg-white border border-primary text-primary font-semibold py-3 px-6 text-center !rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap w-full block"
+            >
+              Select Plan
+            </a>
           </div>
 
-          <div class="plan" style="border: 2px solid #6a5ae0">
-            <div class="most-popular">Most Popular</div>
-            <h3>Premium Plan</h3>
-            <p class="price">₹999/month</p>
-            <ul class="features">
-              <li>✅ Diet plan</li>
-              <li>✅ Workout plans</li>
-              <li>✅ 24/7 support</li>
+          <!-- Premium Plan -->
+          <div
+            class="bg-primary/5 rounded shadow-md hover:shadow-lg transition-shadow p-8 border-2 border-primary relative"
+          >
+            <div
+              class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 -mt-2 mr-4 rounded-full"
+            >
+              MOST POPULAR
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              Premium Plan
+            </h3>
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-gray-900">₹999</span>
+              <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Personalized Diet Plan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Custom Workout Plan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">24/7 WhatsApp Support</span>
+              </li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <a
+              href="https://wa.me/919724878903?text=Hello%20Team%20Fit%20Bridge%2C%20I%20am%20interested%20in%20your%20Personalized%20Diet%20Plan.%20Please%20guide%20me%20further."
+              class="mt-[7rem] bg-primary text-white font-semibold py-3 px-6 text-center !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap w-full block"
+            >
+              Select Plan
+            </a>
           </div>
-          <div class="plan">
-            <h3>Custom Plan</h3>
-            <p class="price">₹1499/month</p>
-            <ul class="features">
-              <li>✅ Personalized diet</li>
-              <li>✅ Workouts</li>
-              <li>✅ Live consultation</li>
+
+          <!-- Custom Plan -->
+          <div
+            class="bg-white rounded shadow-md hover:shadow-lg transition-shadow p-8 border border-gray-100"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              Custom Plan
+            </h3>
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-gray-900">₹1499</span>
+              <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Fully Customized Diet Plan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Personalized Workout Plan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Weekly Live Consultations</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">24/7 Priority Support</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700">Stress & Sleep Management</span>
+              </li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <!-- <button
+              class="w-full mt-[2rem] bg-white border border-primary text-primary font-semibold py-3 px-6 !rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap"
+            >
+              Select Plan
+            </button> -->
+            <a
+              href="https://wa.me/919724878903?text=Hello%20Team%20Fit%20Bridge%2C%20I%20want%20to%20discuss%20about%20the%20Custom%20Plan."
+              class="mt-6 bg-white border border-primary text-primary font-semibold py-3 px-6 text-center !rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap w-full block"
+            >
+              Select Plan
+            </a>
           </div>
-          <div class="plan">
-            <h3>One-time Detox Plan</h3>
-            <p class="price">₹99</p>
-            <ul class="features">
-              <li>✅ Short-term detox meal plan</li>
+
+          <!-- Detox Plan -->
+          <div
+            class="bg-white rounded shadow-md hover:shadow-lg transition-shadow p-8 border border-gray-100"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">
+              Detox Plan
+            </h3>
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold text-gray-900">₹99</span>
+              <span class="text-gray-600">/one-time</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mr-2 mt-1"></i>
+                <span class="text-gray-700"> Short-term detox meal plan</span>
+              </li>
             </ul>
-            <a href="#" class="btn">Get Started</a>
+            <a
+              href="https://wa.me/919724878903?text=Hello%20Team%20Fit%20Bridge%2C%20I%20want%20to%20discuss%20about%20the%20Custom%20Plan."
+              class="mt-[12rem] bg-white border border-primary text-primary font-semibold py-3 px-6 text-center !rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap w-full block"
+            >
+              Select Plan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- screenshot section -->
+    <section class="py-12 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-gray-800">
+            Real Client Transformations
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Authentic feedback from our community showing real results from our
+            fitness and nutrition programs
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review1.png"
+              alt="WhatsApp Review 1"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review2.png"
+              alt="WhatsApp Review 2"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review3.png"
+              alt="WhatsApp Review 3"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review4.png"
+              alt="WhatsApp Review 1"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review5.png"
+              alt="WhatsApp Review 2"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="images/review/review6.png"
+              alt="WhatsApp Review 3"
+              class="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <h1>Contact Us</h1>
       <div class="footer-container">
         <div class="footer-section">
           <img src="Images/3 copy.png" style="width: 200px" alt="logo" />
@@ -327,10 +647,10 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#pricing">Pricing</a></li>
+            <li><a href="Blog & Resources.html">Blog</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -359,14 +679,6 @@
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
-        </div>
-
-        <div class="footer-section">
-          <h3>Newsletter</h3>
-          <form action="">
-            <input type="email" required="Enter your email" />
-            <button class="sub-btn" type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
       <hr />

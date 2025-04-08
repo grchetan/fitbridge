@@ -65,6 +65,9 @@
   .nav-menu.active {
     display: flex;
   }
+  nav .logo img:hover {
+    transform: none;
+  }
 
   .logo {
     width: 100%;
@@ -156,7 +159,7 @@
     font-size: 1.4rem;
   }
   .intro-home {
-    padding: 4rem;
+    padding: 8rem 4rem;
   }
 
   /*--------------------
@@ -200,6 +203,9 @@
 /* ----------------------------------   768p for Tablet    ------------------------------------------- */
 /* Home Buttons   */
 @media (max-width: 768px) {
+  .nav .logo img {
+    width: 100px;
+  }
   .home-btns {
     font-size: 17px;
     padding: 11px 22px;
@@ -260,7 +266,7 @@
     border-radius: 6px;
   }
   .intro-home {
-    padding: 20px 10px;
+    padding: 90px 10px;
   }
 
   .service-head h1 {
@@ -389,5 +395,109 @@
 
   .copyright {
     font-size: 0.8rem;
+  }
+}
+
+/*=============================
+
+    About page responsive  
+
+=============================*/
+/* ---------- Tablet Screens ---------- */
+@media (max-width: 1024px) {
+  .our-story {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .our-story-item {
+    padding: 4rem 2rem;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .our-story-img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .mission,
+  .vision {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+
+  .mission-vision-container h1 {
+    padding: 4rem 2rem;
+  }
+}
+
+/* ---------- Mobile Screens ---------- */
+@media (max-width: 768px) {
+  .about-us-head {
+    padding: 3rem 1rem;
+  }
+
+  .about-us-head h1 {
+    font-size: 36px;
+  }
+
+  .about-us-head p {
+    font-size: 18px;
+  }
+
+  .our-story-item h1 {
+    font-size: 28px;
+    padding: 1rem 0;
+  }
+
+  .our-story-item p {
+    font-size: 16px;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 22px;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 16px;
+  }
+}
+
+/* ---------- Small Mobile (iPhone SE etc.) ---------- */
+@media (max-width: 480px) {
+  .about-us-head h1 {
+    font-size: 28px;
+  }
+
+  .about-us-head p {
+    font-size: 16px;
+  }
+
+  .our-story-item {
+    padding: 2rem 1rem;
+  }
+
+  .our-story-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .mission,
+  .vision {
+    padding: 20px;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 20px;
+  }
+
+  .mission-vision-container h1 {
+    font-size: 26px;
+    padding: 2rem 1rem;
   }
 }
