@@ -12,6 +12,34 @@
       href="Images/favicon_io/android-chrome-192x192.png"
       type="image/x-icon"
     />
+    <!-- Tawlind css link -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4299e1", secondary: "#3182ce" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!--Social icon fonts -->
     <link
       rel="stylesheet"
@@ -76,7 +104,7 @@
         data-aos-delay="50"
         data-aos-duration="200"
       >
-        <div class="headline">
+        <div class="headline font-bold">
           <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
             FIT LIFE, FIT BUDGET – YOUR ULTIMATE HEALTH & WELLNESS PARTNER!
           </h1>
@@ -119,8 +147,8 @@
 
     <section class="intro-section">
       <div class="intro-home">
-        <div class="logo2">
-          <h1 data-aos="fade-right"><span>FIT</span>BRIDGE</h1>
+        <div class="logo2 font-bold">
+          <h1 data-aos="fade-right "><span>FIT</span>BRIDGE</h1>
         </div>
         <h1 class="home-intro" data-aos="fade-up">
           At Fit Bridge, we bridge the gap between your fitness goals and real,
@@ -132,11 +160,11 @@
       <!--  -->
 
       <div class="service-container">
-        <h1 class="service-head" data-aos="fade">OUR SERVICES</h1>
+        <h1 class="service-head font-bold" data-aos="fade">OUR SERVICES</h1>
         <div class="services">
           <div class="service-box" data-aos="fade" data-aos-delay="100">
             <i class="fas fa-utensils"></i>
-            <h1>CUSTOMIZED DIET PLANS</h1>
+            <h1 class="font-bold">CUSTOMIZED DIET PLANS</h1>
             <p>
               Tailored meal plans for weight loss, weight gain, and health
               conditions.
@@ -145,29 +173,29 @@
 
           <div class="service-box" data-aos="fade" data-aos-delay="150">
             <i class="fas fa-dumbbell"></i>
-            <h1>Live Workout Sessions</h1>
+            <h1 class="font-bold">Live Workout Sessions</h1>
             <p>virtual workout classes with expert trainers.</p>
           </div>
 
           <div class="service-box" data-aos="fade" data-aos-delay="200">
             <i class="fas fa-headset"></i>
-            <h1>24/7 Support & Guidance</h1>
+            <h1 class="font-bold">24/7 Support & Guidance</h1>
             <p>constant support from our experts.</p>
           </div>
 
           <div class="service-box" data-aos="fade" data-aos-delay="250">
             <i class="fas fa-heartbeat"></i>
-            <h1>Daily Follow-ups & Health Monitoring</h1>
+            <h1 class="font-bold">Daily Follow-ups & Health Monitoring</h1>
             <p>you stay motivated.</p>
           </div>
           <div class="service-box" data-aos="fade" data-aos-delay="300">
             <i class="fas fa-tags"></i>
-            <h1>Affordable Pricing</h1>
+            <h1 class="font-bold">Affordable Pricing</h1>
             <p>services at budget-friendly prices.</p>
           </div>
           <div class="service-box" data-aos="fade" data-aos-delay="350">
             <i class="fas fa-book-open"></i>
-            <h1>Recipe Books</h1>
+            <h1 class="font-bold">Recipe Books</h1>
             <p>healthy recipes for weight loss and muscle gain.</p>
           </div>
         </div>
@@ -175,7 +203,12 @@
     </section>
 
     <section class="whychoose-container">
-      <h1 data-aos="fade">WHY CHOOSE FIT BRIDGE?</h1>
+      <h1
+        data-aos="fade"
+        class="p-12 text-[2.4rem] text-center font-sans font-bold"
+      >
+        WHY CHOOSE FIT BRIDGE?
+      </h1>
 
       <div class="whychoose">
         <div class="whychoose-p" data-aos="fade-right">
@@ -225,6 +258,7 @@
       </div>
     </section>
 
+    <!-- instagram section -->
     <section
       class="insta-frame-container"
       data-aos="fade-up"
@@ -242,55 +276,285 @@
 
     <!-- BMI Container start -->
     <section class="bmi">
-      <div class="bmi-container">
-        <h1>BMI Calculator</h1>
-        <p>
-          Body Mass Index (BMI) helps you determine whether you're underweight,
-          normal, overweight, or obese.
-        </p>
+      <div class="max-w-7xl mx-auto px-4 py-12 md:py-20">
+        <div
+          class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-lg"
+        >
+          <!-- Left Side - Calculator Form -->
+          <div class="w-full md:w-3/5 p-6 md:p-10">
+            <div class="text-center md:text-left mb-8">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                BMI Calculator
+              </h1>
+              <p class="text-gray-600">
+                Know your Body Mass Index to stay on the right fitness track!
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100"
+            >
+              <form id="bmi-form" class="space-y-6">
+                <div class="space-y-4">
+                  <div class="bmi-input-container">
+                    <input
+                      type="number"
+                      id="weight"
+                      class="bmi-input w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-transparent"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="weight">Weight (kg)</label>
+                  </div>
 
-        <div class="input-section">
-          <input type="number" id="weight" placeholder="Weight in kg" />
-          <input type="number" id="height" placeholder="Height in meters" />
-          <button onclick="calculateBMI()">Calculate BMI</button>
-        </div>
+                  <div class="mt-2">
+                    <div
+                      class="flex justify-between text-sm text-gray-500 mb-1"
+                    >
+                      <span>40kg</span>
+                      <span>150kg</span>
+                    </div>
+                    <input
+                      type="range"
+                      id="weight-slider"
+                      min="40"
+                      max="150"
+                      value="70"
+                      class="w-full"
+                    />
+                  </div>
+                </div>
 
-        <div class="result">
-          <h2>Your BMI: <span id="bmi-value">0</span></h2>
-          <p id="bmi-category">Category: N/A</p>
-        </div>
+                <div class="space-y-4">
+                  <div class="bmi-input-container">
+                    <input
+                      type="number"
+                      id="height"
+                      class="bmi-input w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-transparent"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="height">Height (cm)</label>
+                  </div>
 
-        <div class="bmi-info">
-          <h3>BMI Chart:</h3>
-          <ul>
-            <li>Underweight: Below 18.5</li>
-            <li>Normal Weight: 18.5 - 24.9 ✅</li>
-            <li>Overweight: 25 - 29.9</li>
-            <li>Obese: 30 or Above 🚫</li>
-          </ul>
+                  <div class="mt-2">
+                    <div
+                      class="flex justify-between text-sm text-gray-500 mb-1"
+                    >
+                      <span>120cm</span>
+                      <span>220cm</span>
+                    </div>
+                    <input
+                      type="range"
+                      id="height-slider"
+                      min="120"
+                      max="220"
+                      value="170"
+                      class="w-full"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <label class="custom-checkbox pl-7 text-gray-600">
+                    <input type="checkbox" id="save-data" />
+                    <span class="checkmark"></span>
+                    Save my measurements
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  id="calculate-btn"
+                  class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 !rounded-button font-medium transition duration-300 hover:shadow-md hover:scale-[1.02] whitespace-nowrap flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center mr-2">
+                    <i class="ri-calculator-line"></i>
+                  </div>
+                  Calculate BMI
+                </button>
+              </form>
+              <div
+                id="result-container"
+                class="hidden mt-8 p-6 bg-gray-50 rounded-xl border border-gray-100"
+              >
+                <div class="text-center">
+                  <h3 class="text-xl font-semibold text-gray-700 mb-2">
+                    Your BMI Result
+                  </h3>
+                  <div
+                    class="text-4xl font-bold text-primary mb-2"
+                    id="bmi-value"
+                  >
+                    24.5
+                  </div>
+                  <div
+                    class="inline-block px-4 py-1 rounded-full font-medium"
+                    id="bmi-category"
+                  >
+                    Normal
+                  </div>
+                  <p class="mt-4 text-gray-600" id="bmi-description">
+                    Your BMI indicates that you have a healthy weight for your
+                    height.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <div
+                    class="w-full h-2 bg-gray-200 rounded-full overflow-hidden"
+                  >
+                    <div class="flex h-full">
+                      <div class="h-full bg-red-300 flex-1"></div>
+                      <div class="h-full bg-green-300 flex-1"></div>
+                      <div class="h-full bg-yellow-300 flex-1"></div>
+                      <div class="h-full bg-red-300 flex-1"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>Underweight</span>
+                    <span>Normal</span>
+                    <span>Overweight</span>
+                    <span>Obese</span>
+                  </div>
+                </div>
+
+                <div class="mt-6 text-sm text-gray-500">
+                  <p>BMI Categories:</p>
+                  <ul class="mt-1 space-y-1">
+                    <li>Underweight: Less than 18.5</li>
+                    <li>Normal weight: 18.5 - 24.9</li>
+                    <li>Overweight: 25 - 29.9</li>
+                    <li>Obesity: 30 or greater</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Image -->
+          <div class="w-full md:w-2/5 bg-gray-100 relative">
+            <img
+              src="Images/bmi-cal-image.png"
+              alt="Fitness Measurement"
+              class="w-full h-full object-cover object-top"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6 md:p-8"
+            >
+              <div class="text-white">
+                <h2 class="text-2xl font-bold mb-2">Track Your Progress</h2>
+                <p class="text-white/90">
+                  Monitoring your BMI is an important step in your fitness
+                  journey. Regular checks help you stay on track with your
+                  health goals.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <script>
-        function calculateBMI() {
-          const weight = parseFloat(document.getElementById("weight").value);
-          const height = parseFloat(document.getElementById("height").value);
-          const bmi = (weight / (height * height)).toFixed(2);
-          const result = document.getElementById("bmi-value");
-          const category = document.getElementById("bmi-category");
+        document.addEventListener("DOMContentLoaded", function () {
+          const weightInput = document.getElementById("weight");
+          const heightInput = document.getElementById("height");
+          const weightSlider = document.getElementById("weight-slider");
+          const heightSlider = document.getElementById("height-slider");
+          const bmiForm = document.getElementById("bmi-form");
+          const resultContainer = document.getElementById("result-container");
+          const bmiValue = document.getElementById("bmi-value");
+          const bmiCategory = document.getElementById("bmi-category");
+          const bmiDescription = document.getElementById("bmi-description");
 
-          if (bmi < 18.5) {
-            category.innerText = "Category: Underweight 🟡";
-          } else if (bmi >= 18.5 && bmi <= 24.9) {
-            category.innerText = "Category: Normal ✅";
-          } else if (bmi >= 25 && bmi <= 29.9) {
-            category.innerText = "Category: Overweight 🟠";
-          } else {
-            category.innerText = "Category: Obese 🔴";
+          // Initialize values
+          weightInput.value = weightSlider.value;
+          heightInput.value = heightSlider.value;
+
+          // Sync slider with input
+          weightSlider.addEventListener("input", function () {
+            weightInput.value = this.value;
+          });
+
+          heightSlider.addEventListener("input", function () {
+            heightInput.value = this.value;
+          });
+
+          // Sync input with slider
+          weightInput.addEventListener("input", function () {
+            const value = parseInt(this.value);
+            if (value >= 40 && value <= 150) {
+              weightSlider.value = value;
+            }
+          });
+
+          heightInput.addEventListener("input", function () {
+            const value = parseInt(this.value);
+            if (value >= 120 && value <= 220) {
+              heightSlider.value = value;
+            }
+          });
+          // Calculate BMI
+          bmiForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const weight = parseFloat(weightInput.value);
+            const height = parseFloat(heightInput.value) / 100; // Convert cm to meters
+
+            if (weight && height) {
+              const bmi = (weight / (height * height)).toFixed(1);
+              bmiValue.textContent = bmi;
+
+              let category, description, colorClass;
+
+              if (bmi < 18.5) {
+                category = "Underweight";
+                description =
+                  "Your BMI indicates that you may be underweight. Consider consulting with a healthcare professional.";
+                colorClass = "bg-red-200 text-red-800";
+              } else if (bmi >= 18.5 && bmi < 25) {
+                category = "Normal";
+                description =
+                  "Your BMI indicates that you have a healthy weight for your height.";
+                colorClass = "bg-green-200 text-green-800";
+              } else if (bmi >= 25 && bmi < 30) {
+                category = "Overweight";
+                description =
+                  "Your BMI indicates that you may be overweight. Consider a balanced diet and regular exercise.";
+                colorClass = "bg-yellow-200 text-yellow-800";
+              } else {
+                category = "Obese";
+                description =
+                  "Your BMI indicates obesity. It's recommended to consult with a healthcare professional.";
+                colorClass = "bg-red-200 text-red-800";
+              }
+
+              bmiCategory.textContent = category;
+              bmiCategory.className = `inline-block px-4 py-1 rounded-full font-medium ${colorClass}`;
+              bmiDescription.textContent = description;
+
+              resultContainer.classList.remove("hidden");
+              resultContainer.classList.add("result-fade-in");
+
+              // Save data if checkbox is checked
+              if (document.getElementById("save-data").checked) {
+                localStorage.setItem("bmi-weight", weight);
+                localStorage.setItem("bmi-height", height * 100);
+              }
+            }
+          });
+
+          // Load saved data if available
+          if (
+            localStorage.getItem("bmi-weight") &&
+            localStorage.getItem("bmi-height")
+          ) {
+            weightInput.value = localStorage.getItem("bmi-weight");
+            heightInput.value = localStorage.getItem("bmi-height");
+            weightSlider.value = weightInput.value;
+            heightSlider.value = heightInput.value;
+            document.getElementById("save-data").checked = true;
           }
-
-          result.innerText = bmi;
-        }
+        });
       </script>
     </section>
 

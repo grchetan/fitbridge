@@ -120,40 +120,7 @@ nav ul li a:hover::after {
   background: url("4png.png") no-repeat center center/cover;
   /* background: linear-gradient(130deg, white 50%, #28a746 50%); */
 }
-/* 
-.home-bg-image {
-  position: absolute;
-  margin-top: 50px;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
 
-.desktop-image {
-  width: 100%;
-  object-fit: contain;
-}
-.mobile-image {
-  display: none;
-}
-
-@media (max-width: 1023px) {
-  .mobile-image {
-    display: block;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .desktop-image {
-    display: none;
-  }
-} */
-/* .home-bg-image .headline {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  max-width: 1000px;
-} */
 .headline {
   max-width: 1000px;
   margin-left: 40px;
@@ -388,6 +355,7 @@ Why choose fitbridge
 }
 .whychoose-item h1 {
   font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
@@ -491,52 +459,112 @@ hr {
 /*-----------------
   BMI TEST CONTAINER
   --------------------- */
-.bmi {
-  padding: 4rem;
-  display: flex;
-  justify-content: center;
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
+.bmi-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+.bmi-input-container {
+  position: relative;
+}
+.bmi-input-container label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  pointer-events: none;
+  color: #718096;
+}
+.bmi-input:focus + label,
+.bmi-input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
   background-color: white;
+  padding: 0 4px;
 }
-.bmi-container {
-  background-color: #ffffff;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  width: 90%;
-  max-width: 1200px;
+.result-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
-
-.input-section input {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+input[type="range"] {
+  -webkit-appearance: none;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: transparent;
-  border: none;
-  color: rgb(0, 0, 0);
+  height: 6px;
+  background: #e2e8f0;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.186);
+  outline: none;
 }
-
-.bmi button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  border-radius: 5px;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4299e1;
+  border-radius: 50%;
   cursor: pointer;
-  margin-bottom: 20px;
+  transition: all 0.3s;
 }
-
-.result {
-  text-align: center;
-  font-size: 18px;
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #3182ce;
+  transform: scale(1.1);
 }
-
-.bmi-info {
-  margin-top: 20px;
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
 }
-
-ul li {
-  margin: 5px 0;
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.custom-checkbox:hover input ~ .checkmark {
+  border-color: #4299e1;
+}
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #4299e1;
+  border-color: #4299e1;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
