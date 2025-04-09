@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FITBRIDGE</title>
+    <title>Start Your Wellness Journey</title>
 
     <link
       rel="shortcut icon"
@@ -16,7 +16,7 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { primary: "#2ECC71", secondary: "#10B981" },
+            colors: { primary: "#8ECF9D", secondary: "#FFCDB2" },
             borderRadius: {
               none: "0px",
               sm: "4px",
@@ -67,6 +67,104 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/advanced.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+        background-color: #f9f9f9;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #8ecf9d;
+        box-shadow: 0 0 0 2px rgba(142, 207, 157, 0.2);
+        transition: all 0.3s ease;
+      }
+      .custom-radio input[type="radio"] {
+        display: none;
+      }
+      .custom-radio input[type="radio"] + label {
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 20px;
+      }
+      .custom-radio input[type="radio"] + label:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 50%;
+        background: #fff;
+        transition: all 0.3s ease;
+      }
+      .custom-radio input[type="radio"]:checked + label:before {
+        border-color: #8ecf9d;
+      }
+      .custom-radio input[type="radio"]:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #8ecf9d;
+        transition: all 0.3s ease;
+      }
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+      }
+      /* Hide number input arrows */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      @media (max-width: 768px) {
+        .min-h-screen {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+      }
+      /* Custom dropdown styles */
+      #locationOptions {
+        max-height: 250px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+      }
+      #locationOptions::-webkit-scrollbar {
+        width: 6px;
+      }
+      #locationOptions::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      #locationOptions::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+      }
+      #locationOptions::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+      #locationOptions div {
+        transition: all 0.2s ease;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -102,124 +200,518 @@
     </section>
 
     <!-- contact us section  -->
-    <main class="container mx-auto px-6 py-12 max-w-6xl">
-      <section class="mb-16 mt-[10rem]">
-        <h1
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
-        >
-          Contact Us
-        </h1>
-
-        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-          <div class="flex flex-wrap justify-center gap-6 mb-8">
-            <a
-              href="https://wa.me/919724878903"
-              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
-            >
-              <div
-                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
-              >
-                <i class="ri-whatsapp-line ri-lg text-primary"></i>
-              </div>
-              <span>WhatsApp</span>
-            </a>
-
-            <a
-              href="mailto:fitbridgeofficial@gmail.com"
-              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
-            >
-              <div
-                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
-              >
-                <i class="ri-mail-line ri-lg text-primary"></i>
-              </div>
-              <span>Email</span>
-            </a>
-
-            <a
-              href="#"
-              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
-            >
-              <div
-                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
-              >
-                <i class="ri-instagram-line ri-lg text-primary"></i>
-              </div>
-              <span>Instagram</span>
-            </a>
-
-            <a
-              href="#"
-              class="flex items-center gap-2 text-gray-700 hover:text-primary transition-all"
-            >
-              <div
-                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full"
-              >
-                <i class="ri-facebook-fill ri-lg text-primary"></i>
-              </div>
-              <span>Facebook</span>
-            </a>
+    <div
+      class="min-h-screen mt-[5rem] flex items-center justify-center p-4 py-12"
+    >
+      <div
+        class="bg-white rounded-lg shadow-lg w-full max-w-5xl overflow-hidden"
+      >
+        <div class="p-8 md:p-12">
+          <div class="text-center mb-10">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+              Contact Us
+            </h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Fill out the form and we'll get in touch to help you reach your
+              health goals.
+            </p>
+            <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
           </div>
-
-          <form class="max-w-2xl mx-auto">
-            <div class="mb-6">
-              <label
-                for="name"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Full Name</label
-              >
+          <form class="space-y-6" method="post" name="google-sheet">
+            <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+              <div class="relative">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-user-line"></i>
+                  </div>
+                  <label for="name" class="text-gray-700 font-medium"
+                    >Full Name</label
+                  >
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="relative">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-mail-line"></i>
+                  </div>
+                  <label for="email" class="text-gray-700 font-medium"
+                    >Email Address</label
+                  >
+                </div>
+                <input
+                  type="email"
+                  required
+                  name="email"
+                  id="email"
+                  class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white"
+                  placeholder="Enter your email"
+                />
+              </div>
+            </div>
+            <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+              <div class="relative">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-map-pin-line"></i>
+                  </div>
+                  <label for="location" class="text-gray-700 font-medium"
+                    >State / Country</label
+                  >
+                </div>
+                <div class="relative">
+                  <div
+                    id="locationDropdown"
+                    class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white cursor-pointer flex justify-between items-center"
+                  >
+                    <span id="selectedLocation">Select your state</span>
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-gray-500"
+                    >
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </div>
+                  <div
+                    id="locationOptions"
+                    class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded shadow-lg hidden max-h-60 overflow-y-auto"
+                  >
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      style="pointer-events: none; opacity: 0.6;"
+                      aria-disabled="true"
+                      data-value=""
+                    >
+                      Select your state
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Andhra Pradesh"
+                    >
+                      Andhra Pradesh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Arunachal Pradesh"
+                    >
+                      Arunachal Pradesh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Assam"
+                    >
+                      Assam
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Bihar"
+                    >
+                      Bihar
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Chhattisgarh"
+                    >
+                      Chhattisgarh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Goa"
+                    >
+                      Goa
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Gujarat"
+                    >
+                      Gujarat
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Haryana"
+                    >
+                      Haryana
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Himachal Pradesh"
+                    >
+                      Himachal Pradesh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Jharkhand"
+                    >
+                      Jharkhand
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Karnataka"
+                    >
+                      Karnataka
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Kerala"
+                    >
+                      Kerala
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Madhya Pradesh"
+                    >
+                      Madhya Pradesh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Maharashtra"
+                    >
+                      Maharashtra
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Manipur"
+                    >
+                      Manipur
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Meghalaya"
+                    >
+                      Meghalaya
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Mizoram"
+                    >
+                      Mizoram
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Nagaland"
+                    >
+                      Nagaland
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Odisha"
+                    >
+                      Odisha
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Punjab"
+                    >
+                      Punjab
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Rajasthan"
+                    >
+                      Rajasthan
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Sikkim"
+                    >
+                      Sikkim
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Tamil Nadu"
+                    >
+                      Tamil Nadu
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Telangana"
+                    >
+                      Telangana
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Tripura"
+                    >
+                      Tripura
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Uttar Pradesh"
+                    >
+                      Uttar Pradesh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Uttarakhand"
+                    >
+                      Uttarakhand
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="West Bengal"
+                    >
+                      West Bengal
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Andaman and Nicobar Islands"
+                    >
+                      Andaman and Nicobar Islands
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Chandigarh"
+                    >
+                      Chandigarh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Dadra and Nagar Haveli and Daman and Diu"
+                    >
+                      Dadra and Nagar Haveli and Daman and Diu
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Delhi"
+                    >
+                      Delhi
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Jammu and Kashmir"
+                    >
+                      Jammu and Kashmir
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Ladakh"
+                    >
+                      Ladakh
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Lakshadweep"
+                    >
+                      Lakshadweep
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Puducherry"
+                    >
+                      Puducherry
+                    </div>
+                    <div
+                      class="p-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="Other"
+                    >
+                      Other (Outside India)
+                    </div>
+                  </div>
+                  <input
+                    type="hidden"
+                    required
+                    id="location"
+                    name="location"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="relative">
+                <div class="flex items-center mb-2">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                  >
+                    <i class="ri-phone-line"></i>
+                  </div>
+                  <label for="phone" class="text-gray-700 font-medium"
+                    >Contact Number</label
+                  >
+                </div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="contact-number"
+                  required
+                  class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+            <div class="relative">
+              <div class="flex items-center mb-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                >
+                  <i class="ri-calendar-line"></i>
+                </div>
+                <label for="age" class="text-gray-700 font-medium">Age</label>
+              </div>
               <input
-                type="text"
-                id="name"
-                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white"
-                placeholder="Your name"
+                type="number"
+                id="age"
                 required
+                name="age"
+                class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white appearance-none"
+                placeholder="Enter your age"
+                min="1"
+                max="120"
               />
             </div>
-
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Email Address</label
-              >
+            <div class="relative">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-2"
+                ></div>
+                <label class="text-gray-700 font-medium"
+                  >What's your goal?</label
+                >
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="custom-radio">
+                  <input
+                    type="radio"
+                    id="goal1"
+                    required
+                    name="goal"
+                    value="Weight Management"
+                  />
+                  <label for="goal1" class="text-gray-700"
+                    >Weight Management</label
+                  >
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="goal2" name="goal" value="Thyroid" />
+                  <label for="goal2" class="text-gray-700">Thyroid</label>
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="goal3" name="goal" value="PCOS" />
+                  <label for="goal3" class="text-gray-700">PCOS</label>
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="goal4" name="goal" value="Diabetes" />
+                  <label for="goal4" class="text-gray-700">Diabetes</label>
+                </div>
+                <div class="custom-radio">
+                  <input
+                    type="radio"
+                    id="goal5"
+                    name="goal"
+                    value="Hormonal Imbalance"
+                  />
+                  <label for="goal5" class="text-gray-700"
+                    >Hormonal Imbalance</label
+                  >
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="goal6" name="goal" />
+                  <label for="goal6" class="text-gray-700">Other</label>
+                </div>
+              </div>
+              <div id="otherGoalContainer" class="hidden mt-4">
+                <input
+                  type="text"
+                  id="otherGoal"
+                  name="other"
+                  class="form-input w-full px-4 py-3 border border-gray-200 rounded text-gray-800 bg-white"
+                  placeholder="Please specify your goal"
+                />
+              </div>
+            </div>
+            <div class="pt-4">
               <input
-                type="email"
-                id="email"
-                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white"
-                placeholder="your.email@example.com"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                rows="5"
-                class="w-full px-4 py-3 border border-gray-300 rounded text-gray-800 bg-white resize-none"
-                placeholder="How can we help you?"
-                required
-              ></textarea>
-            </div>
-
-            <div class="text-center">
-              <button
                 type="submit"
-                class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-primary/90 transition-all whitespace-nowrap"
-              >
-                Send Message
-              </button>
+                name="submit"
+                value="submit"
+                class="!rounded-button whitespace-nowrap w-full md:w-auto px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold text-center mx-auto block hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              />
             </div>
           </form>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+ <!-- Thank You Message -->
+ <div id="thankYouMessage" class="hidden text-green-600 text-center font-semibold mt-6">
+  ✅ Thank you for contacting Fit Bridge! We'll reach out to you soon.
+</div>
+</div>
 
+<!-- Google Script -->
+<script>
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyZkJKVa4psGK-eMJApX91PC7C5wOCvpt9hp9LEFWU9lG7r2MHUgrKncxLkvqEmyWiYWw/exec";
+const form = document.forms["google-sheet"];
+const thankYou = document.getElementById("thankYouMessage");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      form.reset(); // Clear form
+      thankYou.classList.remove("hidden"); // Show thank you message
+
+      // Hide thank you after 5 sec (optional)
+      setTimeout(() => {
+        thankYou.classList.add("hidden");
+      }, 5000);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
+</script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const otherRadio = document.getElementById("goal6");
+        const otherGoalContainer =
+          document.getElementById("otherGoalContainer");
+        document.querySelectorAll('input[name="goal"]').forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (otherRadio.checked) {
+              otherGoalContainer.classList.remove("hidden");
+            } else {
+              otherGoalContainer.classList.add("hidden");
+            }
+          });
+        });
+        // Custom dropdown functionality
+        const locationDropdown = document.getElementById("locationDropdown");
+        const locationOptions = document.getElementById("locationOptions");
+        const selectedLocation = document.getElementById("selectedLocation");
+        const locationInput = document.getElementById("location");
+        locationDropdown.addEventListener("click", function () {
+          locationOptions.classList.toggle("hidden");
+        });
+        document.querySelectorAll("#locationOptions div").forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            selectedLocation.textContent = this.textContent;
+            locationInput.value = value;
+            locationOptions.classList.add("hidden");
+          });
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !locationDropdown.contains(e.target) &&
+            !locationOptions.contains(e.target)
+          ) {
+            locationOptions.classList.add("hidden");
+          }
+        });
+        
+      });
+    </script>
     <footer>
       <div class="footer-container">
         <div class="footer-section">
