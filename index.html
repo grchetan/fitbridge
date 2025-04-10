@@ -276,284 +276,394 @@
 
     <!-- BMI Container start -->
     <section class="bmi">
-      <div class="max-w-7xl mx-auto px-4 py-12 md:py-20">
-        <div
-          class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-lg"
-        >
-          <!-- Left Side - Calculator Form -->
-          <div class="w-full md:w-3/5 p-6 md:p-10">
-            <div class="text-center md:text-left mb-8">
-              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                BMI Calculator
-              </h1>
-              <p class="text-gray-600">
-                Know your Body Mass Index to stay on the right fitness track!
-              </p>
-            </div>
-            <div
-              class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100"
-            >
-              <form id="bmi-form" class="space-y-6">
-                <div class="space-y-4">
-                  <div class="bmi-input-container">
-                    <input
-                      type="number"
-                      id="weight"
-                      class="bmi-input w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-transparent"
-                      placeholder=" "
-                      required
-                    />
-                    <label for="weight">Weight (kg)</label>
-                  </div>
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Calculator Section (Left) -->
+        <div class="w-full md:w-3/5 bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+            Calculate Your BMI
+          </h2>
 
-                  <div class="mt-2">
-                    <div
-                      class="flex justify-between text-sm text-gray-500 mb-1"
-                    >
-                      <span>40kg</span>
-                      <span>150kg</span>
-                    </div>
-                    <input
-                      type="range"
-                      id="weight-slider"
-                      min="40"
-                      max="150"
-                      value="70"
-                      class="w-full"
-                    />
-                  </div>
-                </div>
-
-                <div class="space-y-4">
-                  <div class="bmi-input-container">
-                    <input
-                      type="number"
-                      id="height"
-                      class="bmi-input w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-transparent"
-                      placeholder=" "
-                      required
-                    />
-                    <label for="height">Height (cm)</label>
-                  </div>
-
-                  <div class="mt-2">
-                    <div
-                      class="flex justify-between text-sm text-gray-500 mb-1"
-                    >
-                      <span>120cm</span>
-                      <span>220cm</span>
-                    </div>
-                    <input
-                      type="range"
-                      id="height-slider"
-                      min="120"
-                      max="220"
-                      value="170"
-                      class="w-full"
-                    />
-                  </div>
-                </div>
-
-                <div class="flex items-center">
-                  <label class="custom-checkbox pl-7 text-gray-600">
-                    <input type="checkbox" id="save-data" />
-                    <span class="checkmark"></span>
-                    Save my measurements
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  id="calculate-btn"
-                  class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 !rounded-button font-medium transition duration-300 hover:shadow-md hover:scale-[1.02] whitespace-nowrap flex items-center justify-center"
-                >
-                  <div class="w-5 h-5 flex items-center justify-center mr-2">
-                    <i class="ri-calculator-line"></i>
-                  </div>
-                  Calculate BMI
-                </button>
-              </form>
-              <div
-                id="result-container"
-                class="hidden mt-8 p-6 bg-gray-50 rounded-xl border border-gray-100"
+          <div class="space-y-6">
+            <!-- Age Input -->
+            <div>
+              <label
+                for="age"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Age (5-100 years)</label
               >
-                <div class="text-center">
-                  <h3 class="text-xl font-semibold text-gray-700 mb-2">
-                    Your BMI Result
-                  </h3>
-                  <div
-                    class="text-4xl font-bold text-primary mb-2"
-                    id="bmi-value"
-                  >
-                    24.5
-                  </div>
-                  <div
-                    class="inline-block px-4 py-1 rounded-full font-medium"
-                    id="bmi-category"
-                  >
-                    Normal
-                  </div>
-                  <p class="mt-4 text-gray-600" id="bmi-description">
-                    Your BMI indicates that you have a healthy weight for your
-                    height.
-                  </p>
+              <div class="relative">
+                <input
+                  type="number"
+                  id="age"
+                  min="5"
+                  max="100"
+                  class="w-full px-4 py-3 border-none bg-gray-100 rounded focus:ring-2 focus:ring-primary outline-none transition-all text-sm"
+                  placeholder="Enter your age"
+                />
+                <div id="age-error" class="hidden text-red-500 text-xs mt-1">
+                  Please enter a valid age between 5 and 100
                 </div>
+              </div>
+            </div>
 
-                <div class="mt-6">
-                  <div
-                    class="w-full h-2 bg-gray-200 rounded-full overflow-hidden"
+            <!-- Height Input -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Height</label
+                >
+                <div class="unit-toggle bg-gray-100 inline-flex">
+                  <button
+                    id="cm-toggle"
+                    class="active px-4 py-1 text-sm whitespace-nowrap !rounded-button"
                   >
-                    <div class="flex h-full">
-                      <div class="h-full bg-red-300 flex-1"></div>
-                      <div class="h-full bg-green-300 flex-1"></div>
-                      <div class="h-full bg-yellow-300 flex-1"></div>
-                      <div class="h-full bg-red-300 flex-1"></div>
-                    </div>
+                    cm
+                  </button>
+                  <button
+                    id="ft-toggle"
+                    class="px-4 py-1 text-sm whitespace-nowrap !rounded-button"
+                  >
+                    ft/in
+                  </button>
+                </div>
+              </div>
+
+              <div id="cm-input" class="relative">
+                <input
+                  type="number"
+                  id="height-cm"
+                  class="w-full px-4 py-3 border-none bg-gray-100 rounded focus:ring-2 focus:ring-primary outline-none transition-all text-sm"
+                  placeholder="Height in centimeters"
+                />
+                <span
+                  class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm"
+                  >cm</span
+                >
+              </div>
+
+              <div id="ft-input" class="hidden grid grid-cols-2 gap-4">
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="height-ft"
+                    class="w-full px-4 py-3 border-none bg-gray-100 rounded focus:ring-2 focus:ring-primary outline-none transition-all text-sm"
+                    placeholder="Feet"
+                  />
+                  <span
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm"
+                    >ft</span
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="height-in"
+                    class="w-full px-4 py-3 border-none bg-gray-100 rounded focus:ring-2 focus:ring-primary outline-none transition-all text-sm"
+                    placeholder="Inches"
+                  />
+                  <span
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm"
+                    >in</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight Input -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="block text-sm font-medium text-gray-700"
+                  >Weight</label
+                >
+                <div class="unit-toggle bg-gray-100 inline-flex">
+                  <button
+                    id="kg-toggle"
+                    class="active px-4 py-1 text-sm whitespace-nowrap !rounded-button"
+                  >
+                    kg
+                  </button>
+                  <button
+                    id="lb-toggle"
+                    class="px-4 py-1 text-sm whitespace-nowrap !rounded-button"
+                  >
+                    lb
+                  </button>
+                </div>
+              </div>
+
+              <div class="relative mb-4">
+                <input
+                  type="number"
+                  id="weight"
+                  class="w-full px-4 py-3 border-none bg-gray-100 rounded focus:ring-2 focus:ring-primary outline-none transition-all text-sm"
+                  placeholder="Enter your weight"
+                />
+                <span
+                  id="weight-unit"
+                  class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm"
+                  >kg</span
+                >
+              </div>
+
+              <div class="mb-2">
+                <div class="flex justify-between text-xs text-gray-500">
+                  <span>0</span>
+                  <span id="weight-max">200</span>
+                </div>
+              </div>
+
+              <input
+                type="range"
+                id="weight-slider"
+                min="0"
+                max="200"
+                step="0.1"
+                class="w-full"
+              />
+            </div>
+
+            <!-- Calculate Button -->
+            <button
+              id="calculate-btn"
+              class="w-full bg-gradient-to-r from-primary to-blue-500 text-white py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 font-medium text-center mt-4 !rounded-button whitespace-nowrap"
+            >
+              Calculate BMI
+            </button>
+          </div>
+
+          <!-- Results Section (Hidden initially) -->
+          <div id="results" class="mt-8 hidden">
+            <div class="border-t pt-6">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">
+                Your Results
+              </h3>
+
+              <div class="bg-gray-100 rounded-lg p-6 text-center">
+                <div
+                  class="text-4xl font-bold text-primary mb-2"
+                  id="bmi-value"
+                >
+                  24.5
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center text-xl"
+                    id="result-icon"
+                  >
+                    😊
                   </div>
-                  <div class="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>Underweight</span>
-                    <span>Normal</span>
-                    <span>Overweight</span>
-                    <span>Obese</span>
+                  <div class="text-lg font-medium" id="bmi-category">
+                    Normal Weight
                   </div>
                 </div>
+                <div class="text-gray-600" id="bmi-tip">
+                  Maintain a balanced diet and regular exercise routine.
+                </div>
+              </div>
 
-                <div class="mt-6 text-sm text-gray-500">
-                  <p>BMI Categories:</p>
-                  <ul class="mt-1 space-y-1">
-                    <li>Underweight: Less than 18.5</li>
-                    <li>Normal weight: 18.5 - 24.9</li>
-                    <li>Overweight: 25 - 29.9</li>
-                    <li>Obesity: 30 or greater</li>
-                  </ul>
+              <div class="mt-6 grid grid-cols-4 gap-2 text-center text-xs">
+                <div class="bg-blue-100 p-2 rounded">
+                  <div class="font-medium">Underweight</div>
+                  <div>&lt;18.5</div>
+                </div>
+                <div class="bg-green-100 p-2 rounded">
+                  <div class="font-medium">Normal</div>
+                  <div>18.5-24.9</div>
+                </div>
+                <div class="bg-yellow-100 p-2 rounded">
+                  <div class="font-medium">Overweight</div>
+                  <div>25-29.9</div>
+                </div>
+                <div class="bg-red-100 p-2 rounded">
+                  <div class="font-medium">Obese</div>
+                  <div>≥30</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Right Side - Image -->
-          <div class="w-full md:w-2/5 bg-gray-100 relative">
-            <img
-              src="Images/bmiimage2.png"
-              alt="Fitness Measurement"
-              class="w-full h-full object-cover object-top"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6 md:p-8"
-            >
-              <div class="text-white">
-                <h2 class="text-2xl font-bold mb-2">Track Your Progress</h2>
-                <p class="text-white/90">
-                  Monitoring your BMI is an important step in your fitness
-                  journey. Regular checks help you stay on track with your
-                  health goals.
-                </p>
-              </div>
+        <!-- Image Section (Right) -->
+
+        <div class="w-full md:w-2/5 bg-gray-100 relative">
+          <img
+            src="Images/bmiimage2.png"
+            alt="Fitness Measurement"
+            class="w-full h-full object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-6 md:p-8"
+          >
+            <div class="text-white">
+              <h2 class="text-2xl font-bold mb-2">Track Your Progress</h2>
+              <p class="text-white/90">
+                Monitoring your BMI is an important step in your fitness
+                journey. Regular checks help you stay on track with your health
+                goals.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const weightInput = document.getElementById("weight");
-          const heightInput = document.getElementById("height");
-          const weightSlider = document.getElementById("weight-slider");
-          const heightSlider = document.getElementById("height-slider");
-          const bmiForm = document.getElementById("bmi-form");
-          const resultContainer = document.getElementById("result-container");
-          const bmiValue = document.getElementById("bmi-value");
-          const bmiCategory = document.getElementById("bmi-category");
-          const bmiDescription = document.getElementById("bmi-description");
+        // Height unit toggle
+        const cmToggle = document.getElementById("cm-toggle");
+        const ftToggle = document.getElementById("ft-toggle");
+        const cmInput = document.getElementById("cm-input");
+        const ftInput = document.getElementById("ft-input");
 
-          // Initialize values
-          weightInput.value = weightSlider.value;
-          heightInput.value = heightSlider.value;
+        cmToggle.addEventListener("click", () => {
+          cmToggle.classList.add("active");
+          ftToggle.classList.remove("active");
+          cmInput.classList.remove("hidden");
+          ftInput.classList.add("hidden");
+        });
 
-          // Sync slider with input
-          weightSlider.addEventListener("input", function () {
-            weightInput.value = this.value;
-          });
+        ftToggle.addEventListener("click", () => {
+          ftToggle.classList.add("active");
+          cmToggle.classList.remove("active");
+          ftInput.classList.remove("hidden");
+          cmInput.classList.add("hidden");
+        });
 
-          heightSlider.addEventListener("input", function () {
-            heightInput.value = this.value;
-          });
+        // Weight unit toggle
+        const kgToggle = document.getElementById("kg-toggle");
+        const lbToggle = document.getElementById("lb-toggle");
+        const weightUnit = document.getElementById("weight-unit");
+        const weightSlider = document.getElementById("weight-slider");
+        const weightMax = document.getElementById("weight-max");
 
-          // Sync input with slider
-          weightInput.addEventListener("input", function () {
-            const value = parseInt(this.value);
-            if (value >= 40 && value <= 150) {
-              weightSlider.value = value;
+        kgToggle.addEventListener("click", () => {
+          kgToggle.classList.add("active");
+          lbToggle.classList.remove("active");
+          weightUnit.textContent = "kg";
+          weightSlider.max = 200;
+          weightMax.textContent = "200";
+
+          // Convert lb to kg if needed
+          if (lbToggle.classList.contains("active")) {
+            const weightInput = document.getElementById("weight");
+            if (weightInput.value) {
+              weightInput.value = (
+                parseFloat(weightInput.value) / 2.20462
+              ).toFixed(1);
+              weightSlider.value = weightInput.value;
             }
-          });
-
-          heightInput.addEventListener("input", function () {
-            const value = parseInt(this.value);
-            if (value >= 120 && value <= 220) {
-              heightSlider.value = value;
-            }
-          });
-          // Calculate BMI
-          bmiForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const weight = parseFloat(weightInput.value);
-            const height = parseFloat(heightInput.value) / 100; // Convert cm to meters
-
-            if (weight && height) {
-              const bmi = (weight / (height * height)).toFixed(1);
-              bmiValue.textContent = bmi;
-
-              let category, description, colorClass;
-
-              if (bmi < 18.5) {
-                category = "Underweight";
-                description =
-                  "Your BMI indicates that you may be underweight. Consider consulting with a healthcare professional.";
-                colorClass = "bg-red-200 text-red-800";
-              } else if (bmi >= 18.5 && bmi < 25) {
-                category = "Normal";
-                description =
-                  "Your BMI indicates that you have a healthy weight for your height.";
-                colorClass = "bg-green-200 text-green-800";
-              } else if (bmi >= 25 && bmi < 30) {
-                category = "Overweight";
-                description =
-                  "Your BMI indicates that you may be overweight. Consider a balanced diet and regular exercise.";
-                colorClass = "bg-yellow-200 text-yellow-800";
-              } else {
-                category = "Obese";
-                description =
-                  "Your BMI indicates obesity. It's recommended to consult with a healthcare professional.";
-                colorClass = "bg-red-200 text-red-800";
-              }
-
-              bmiCategory.textContent = category;
-              bmiCategory.className = `inline-block px-4 py-1 rounded-full font-medium ${colorClass}`;
-              bmiDescription.textContent = description;
-
-              resultContainer.classList.remove("hidden");
-              resultContainer.classList.add("result-fade-in");
-
-              // Save data if checkbox is checked
-              if (document.getElementById("save-data").checked) {
-                localStorage.setItem("bmi-weight", weight);
-                localStorage.setItem("bmi-height", height * 100);
-              }
-            }
-          });
-
-          // Load saved data if available
-          if (
-            localStorage.getItem("bmi-weight") &&
-            localStorage.getItem("bmi-height")
-          ) {
-            weightInput.value = localStorage.getItem("bmi-weight");
-            heightInput.value = localStorage.getItem("bmi-height");
-            weightSlider.value = weightInput.value;
-            heightSlider.value = heightInput.value;
-            document.getElementById("save-data").checked = true;
           }
+        });
+
+        lbToggle.addEventListener("click", () => {
+          lbToggle.classList.add("active");
+          kgToggle.classList.remove("active");
+          weightUnit.textContent = "lb";
+          weightSlider.max = 440;
+          weightMax.textContent = "440";
+
+          // Convert kg to lb if needed
+          if (kgToggle.classList.contains("active")) {
+            const weightInput = document.getElementById("weight");
+            if (weightInput.value) {
+              weightInput.value = (
+                parseFloat(weightInput.value) * 2.20462
+              ).toFixed(1);
+              weightSlider.value = weightInput.value;
+            }
+          }
+        });
+
+        // Sync weight input and slider
+        const weightInput = document.getElementById("weight");
+
+        weightSlider.addEventListener("input", () => {
+          weightInput.value = weightSlider.value;
+        });
+
+        weightInput.addEventListener("input", () => {
+          weightSlider.value = weightInput.value;
+        });
+
+        // Calculate BMI
+        const calculateBtn = document.getElementById("calculate-btn");
+        const resultsSection = document.getElementById("results");
+        const bmiValue = document.getElementById("bmi-value");
+        const bmiCategory = document.getElementById("bmi-category");
+        const bmiTip = document.getElementById("bmi-tip");
+        const resultIcon = document.getElementById("result-icon");
+        const ageError = document.getElementById("age-error");
+
+        calculateBtn.addEventListener("click", () => {
+          const age = document.getElementById("age").value;
+          let height, weight;
+
+          // Validate age
+          if (age < 5 || age > 100 || !age) {
+            ageError.classList.remove("hidden");
+            return;
+          } else {
+            ageError.classList.add("hidden");
+          }
+
+          // Get height based on selected unit
+          if (cmToggle.classList.contains("active")) {
+            height = document.getElementById("height-cm").value / 100; // convert cm to m
+          } else {
+            const feet = document.getElementById("height-ft").value || 0;
+            const inches = document.getElementById("height-in").value || 0;
+            height = parseInt(feet) * 0.3048 + parseInt(inches) * 0.0254; // convert to m
+          }
+
+          // Get weight based on selected unit
+          weight = parseFloat(weightInput.value);
+          if (lbToggle.classList.contains("active")) {
+            weight = weight / 2.20462; // convert lb to kg
+          }
+
+          // Validate inputs
+          if (!height || !weight) {
+            alert("Please fill in all required fields");
+            return;
+          }
+
+          // Calculate BMI
+          const bmi = weight / (height * height);
+
+          // Display result
+          bmiValue.textContent = bmi.toFixed(1);
+
+          // Set category and tip
+          let category, tip, icon;
+
+          if (bmi < 18.5) {
+            category = "Underweight";
+            tip =
+              "Consider increasing your caloric intake with nutrient-rich foods.";
+            icon = "😕";
+          } else if (bmi < 25) {
+            category = "Normal Weight";
+            tip = "Maintain a balanced diet and regular exercise routine.";
+            icon = "😊";
+          } else if (bmi < 30) {
+            category = "Overweight";
+            tip =
+              "Try incorporating more physical activity and mindful eating.";
+            icon = "🤔";
+          } else {
+            category = "Obese";
+            tip =
+              "Consider consulting a healthcare professional for personalized advice.";
+            icon = "😟";
+          }
+
+          bmiCategory.textContent = category;
+          bmiTip.textContent = tip;
+          resultIcon.textContent = icon;
+
+          // Show results
+          resultsSection.classList.remove("hidden");
+
+          // Scroll to results
+          resultsSection.scrollIntoView({ behavior: "smooth" });
         });
       </script>
     </section>
