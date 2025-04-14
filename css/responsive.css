@@ -3,9 +3,9 @@
 📱 RESPONSIVE DESIGN - MEDIA QUERIES  
 =========================================== 
 
-📌 GLOBAL NAVBAR & FOOTER STYLING  
+📌 GLOBAL NAVBAR STYLING  
 
-   ✅ The Navbar and Footer are shared across all pages 
+   ✅ The Navbar and are shared across all pages 
       (Home, About, Contact).
    ✅ Separate CSS files are not used to maintain consistency.
    ✅ Responsive behavior is handled using media queries.
@@ -291,110 +291,6 @@
   }
   .headline h1 {
     font-size: 28px;
-  }
-}
-
-/* ====== Footer Responsive Design ====== */
-
-/* 📌 Tablets & Small Laptops (768px - 1024px) */
-@media screen and (max-width: 1024px) {
-  footer {
-    padding: 40px 15px;
-  }
-
-  .footer-container {
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .footer-section {
-    flex: 1 1 45%;
-    max-width: 400px;
-  }
-
-  footer h1 {
-    font-size: 1.8rem;
-  }
-
-  .footer-section h3 {
-    font-size: 1.4rem;
-  }
-
-  .footer-section a {
-    font-size: 0.95rem;
-  }
-
-  input[type="email"],
-  .sub-btn {
-    font-size: 0.95rem;
-  }
-}
-
-/* 📌 Mobile Phones (480px - 768px) */
-@media screen and (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-section {
-    max-width: 100%;
-    padding: 10px 20px;
-  }
-
-  footer h1 {
-    font-size: 1.6rem;
-  }
-
-  .footer-section h3 {
-    font-size: 1.3rem;
-  }
-
-  .footer-section a {
-    font-size: 0.9rem;
-  }
-
-  input[type="email"],
-  .sub-btn {
-    font-size: 0.9rem;
-  }
-
-  .social-icons i {
-    font-size: 20px;
-  }
-}
-
-/* 📌 Extra Small Phones (Below 480px) */
-@media screen and (max-width: 480px) {
-  footer {
-    padding: 30px 10px;
-  }
-
-  footer h1 {
-    font-size: 1.4rem;
-  }
-
-  .footer-section h3 {
-    font-size: 1.2rem;
-  }
-
-  .footer-section a {
-    font-size: 0.85rem;
-  }
-
-  input[type="email"],
-  .sub-btn {
-    font-size: 0.85rem;
-  }
-
-  .social-icons i {
-    font-size: 18px;
-  }
-
-  .copyright {
-    font-size: 0.8rem;
   }
 }
 
