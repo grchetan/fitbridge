@@ -1,2 +1,4 @@
-/testing/
+# Ignore the testing folder
+testing/
+# Ignore the output folder
 temp.txt
