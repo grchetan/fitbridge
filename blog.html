@@ -67,48 +67,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <style>
-      .comming-soon-container {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        background-image: url(Images/bg\ theme.png);
-        justify-content: center;
-      }
-      .comming-soon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
       }
 
-      .comming-soon .blog-head1 {
-        color: green;
-        font-size: 44px;
-        margin-top: -90px;
-        margin-bottom: 90px;
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f5f8fa;
       }
-      .comming-soon .blog-head2 {
-        font-size: 48px;
+
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 3px solid rgba(74, 144, 226, 0.2);
+        border-radius: 50%;
+        border-top-color: #4a90e2;
+        animation: spin 1s linear infinite;
       }
-      .comming-soon p {
-        font-size: 18px;
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
       }
-      @keyframes bounceFade {
-        0%,
-        100% {
-          opacity: 0.5;
+
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
           transform: translateY(0);
         }
-        50% {
-          opacity: 1;
-          transform: translateY(-10px);
-        }
-      }
-
-      .blog-head2 {
-        font-size: 2.5rem;
-        color: #2d6a4f; /* Dark green */
-        animation: bounceFade 2s infinite ease-in-out;
       }
     </style>
   </head>
@@ -130,23 +125,43 @@
           <li><a href="services.html">Services</a></li>
           <!-- <li><a href="#Diet Plans & Pricing">Success Stories</a></li> -->
           <li>
-            <a href="Blog & Resources.html" class="active">Blog & Resources</a>
+            <a href="blog.html" class="active">Blog & Resources</a>
           </li>
-          <li><a href="Contact Us.html">Contact Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="comming-soon-container">
-      <div class="comming-soon">
-        <h1 class="blog-head1">Fit Bridge</h1>
-        <h1 class="blog-head2">Coming Soon</h1>
-        <p>
-          Our Blog & Resources section is getting in shape! Stay tuned for
-          expert fitness tips, workout guides, and healthy living inspiration
-        </p>
+    <div
+      class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+    >
+      <div class="w-full max-w-md text-center">
+        <div class="flex justify-center mb-8">
+          <div class="loader"></div>
+        </div>
+
+        <h1
+          class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6 fade-in"
+        >
+          Website Under Construction
+        </h1>
+
+        <div class="space-y-3 mb-10 fade-in" style="animation-delay: 0.2s">
+          <p class="text-gray-600">
+            Our website is currently under construction.
+          </p>
+          <p class="text-gray-600">Please check back again after some time.</p>
+          <p class="text-gray-600">Thank you for your patience!</p>
+        </div>
+
+        <div
+          class="text-sm text-gray-500 fade-in"
+          style="animation-delay: 0.4s"
+        >
+          <p>Expected Launch: Coming Soon</p>
+        </div>
       </div>
-    </section>
+    </div>
 
     <!--Footer -->
     <footer class="bg-gray-900 text-gray-300 px-6 py-10">
@@ -158,7 +173,7 @@
           <img
             src="Images/3 copy.png"
             alt="logo"
-            class="w-48 mb-4 rounded-3xl"
+            class="w-48 mb-4 rounded-3xl rounded-3xl"
           />
         </div>
 
@@ -184,11 +199,7 @@
               >
             </li>
             <li>
-              <a
-                href="Blog & Resources.html"
-                class="hover:text-white transition"
-                >Blog</a
-              >
+              <a href="blog.html" class="hover:text-white transition">Blog</a>
             </li>
           </ul>
         </div>
